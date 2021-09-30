@@ -47,4 +47,8 @@ dependencies {
     // https://developer.android.com/guide/navigation/navigation-getting-started#kts
     implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
+
+    // TextField Material Design Components
+    implementation 'com.google.android.material:material:<1.5.0-alpha04>'
+
 }
