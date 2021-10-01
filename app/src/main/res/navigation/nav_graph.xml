@@ -1,11 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/profilePhoto">
+    app:startDestination="@id/personal">
     <fragment
-        android:id="@+id/profilePhoto"
+        android:id="@+id/registrationSplashScreen"
+        android:name="my.fitness.myfitness.registration.RegistrationSplashScreen"
+        android:label="registration_splash_screen"
+        tools:layout="@layout/registration_splash_screen" >
+        <action
+            android:id="@+id/action_registrationSplashScreen_to_registration"
+            app:destination="@id/registration" />
+    </fragment>
+    <fragment
+        android:id="@+id/registration"
+        android:name="my.fitness.myfitness.registration.Registration"
+        android:label="registration_registration"
+        tools:layout="@layout/registration_registration" >
+        <action
+            android:id="@+id/action_registration_to_personal"
+            app:destination="@id/personal" />
+    </fragment>
+    <fragment
+        android:id="@+id/personal"
+        android:name="my.fitness.myfitness.registration.Personal"
+        android:label="registration_personal"
+        tools:layout="@layout/registration_personal" >
+        <action
+            android:id="@+id/action_personal_to_personal2"
+            app:destination="@id/personal2" />
+        <action
+            android:id="@+id/action_personal_to_registration"
+            app:destination="@id/registration" />
+    </fragment>
+    <fragment
+        android:id="@+id/personal2"
+        android:name="my.fitness.myfitness.registration.Personal2"
+        android:label="registration_personal2"
+        tools:layout="@layout/registration_personal2" >
+        <action
+            android:id="@+id/action_personal2_to_body2"
+            app:destination="@id/body2" />
+    </fragment>
+    <fragment
+        android:id="@+id/body2"
+        android:name="my.fitness.myfitness.registration.Body"
+        android:label="registration_body"
+        tools:layout="@layout/registration_body" >
+        <action
+            android:id="@+id/action_body2_to_membership"
+            app:destination="@id/membership" />
+    </fragment>
+    <fragment
+        android:id="@+id/membership"
+        android:name="my.fitness.myfitness.registration.Membership"
+        android:label="registration_membership"
+        tools:layout="@layout/registration_membership" >
+        <action
+            android:id="@+id/action_membership_to_caoch2"
+            app:destination="@id/caoch2" />
+    </fragment>
+    <fragment
+        android:id="@+id/caoch2"
+        android:name="my.fitness.myfitness.registration.Caoch"
+        android:label="registration_caoch"
+        tools:layout="@layout/registration_caoch" >
+        <action
+            android:id="@+id/action_caoch2_to_profilePhoto2"
+            app:destination="@id/profilePhoto2" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilePhoto2"
         android:name="my.fitness.myfitness.registration.ProfilePhoto"
         android:label="registration_profile_photo"
         tools:layout="@layout/registration_profile_photo" />
