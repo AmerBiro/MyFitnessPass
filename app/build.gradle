@@ -30,6 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures  {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -49,10 +52,12 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
 
-    // TextField Material Design Components
+    // Material Design Components
+    // https://material.io/components?platform=android
     implementation 'com.google.android.material:material:<1.5.0-alpha04>'
 
     // Lottie Files
+    // https://lottiefiles.com/
     implementation "com.airbnb.android:lottie:3.4.0"
 
 }

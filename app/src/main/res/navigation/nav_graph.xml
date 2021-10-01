@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/personal3">
+    app:startDestination="@id/personal22">
     <fragment
-        android:id="@+id/personal3"
-        android:name="my.fitness.myfitness.registration.Personal"
-        android:label="registration_personal"
-        tools:layout="@layout/registration_personal" />
+        android:id="@+id/personal22"
+        android:name="my.fitness.myfitness.registration.Personal2"
+        android:label="registration_personal2"
+        tools:layout="@layout/registration_personal2" />
 </navigation>

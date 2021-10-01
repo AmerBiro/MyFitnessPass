@@ -38,9 +38,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="8dp"
-        android:text="Let’s have an account and start training. \n
-        It takes just 2 minuttes"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Let’s have an account and start training. It takes just 2 minuttes"
         android:textSize="18sp" />
 
     <TextView
@@ -50,7 +50,7 @@
         android:textColor="@color/black"
         android:textSize="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="30dp"
         />
 
 
@@ -59,7 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="24dp"
         android:layout_marginLeft="24dp"
         android:gravity="center"
