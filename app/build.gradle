@@ -60,4 +60,8 @@ dependencies {
     // https://lottiefiles.com/
     implementation "com.airbnb.android:lottie:3.4.0"
 
+    // Range seekbar
+    // https://github.com/syedowaisali/crystal-range-seekbar
+    implementation 'com.crystal:crystalrangeseekbar:1.1.3'
+
 }
