@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/caoch">
+    app:startDestination="@id/profilePhoto">
     <fragment
-        android:id="@+id/caoch"
-        android:name="my.fitness.myfitness.registration.Caoch"
-        android:label="registration_caoch"
-        tools:layout="@layout/registration_caoch" />
+        android:id="@+id/profilePhoto"
+        android:name="my.fitness.myfitness.registration.ProfilePhoto"
+        android:label="registration_profile_photo"
+        tools:layout="@layout/registration_profile_photo" />
 </navigation>
