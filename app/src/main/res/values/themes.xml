@@ -44,6 +44,19 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="body">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <style name="slider">
+        <item name="tickColor">@color/white</item>
+        <item name="thumbColor">@color/white</item>
+        <item name="haloColor">@color/blue</item>
+        <item name="trackColor">@color/blue</item>
+        <item name="thumbElevation">20dp</item>
+        <item name="thumbRadius">14dp</item>
+    </style>
 
 
 

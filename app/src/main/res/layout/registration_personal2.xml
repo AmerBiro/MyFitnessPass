@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".registration.Personal2">
+    tools:context=".registration.Personal2"
+    style="@style/linear_layout_main_page"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="2/6"
-            android:textColor="@color/black"
-            android:textSize="22sp" />
+            style="@style/page_counter"
+            />
 
         <Button
             android:layout_width="65dp"
@@ -31,11 +32,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
         android:text="It is necessery to fill out birthdate and gender info"
-        android:textSize="18sp" />
+        style="@style/page_description"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,8 +46,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_gravity="center"
+        >
 
         <Button
             android:id="@+id/m0"
@@ -77,20 +77,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="30dp"
         android:text="Birthdate"
-        android:textColor="@color/black"
-        android:textSize="24dp" />
+        style="@style/page_title"
+        />
 
     <include
-        android:layout_marginTop="30dp"
         layout="@layout/datepicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
         />
 
 

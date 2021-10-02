@@ -5,27 +5,29 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".registration.Membership"
-    android:orientation="vertical">
+    style="@style/linear_layout_main_page"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="4/6"
-            android:textColor="@color/black"
-            android:textSize="22sp" />
+            style="@style/page_counter"
+            />
 
         <Button
             android:layout_width="65dp"
             android:layout_height="25dp"
             android:layout_alignParentRight="true"
             android:background="@drawable/ic_next"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            />
 
     </RelativeLayout>
 
@@ -33,11 +35,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
+        style="@style/page_description"
         android:text="Skip this page, or fill out your fitness information to have an easier contact to your fitness center"
-        android:textSize="18sp" />
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -52,10 +52,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginLeft="24dp"
-        android:gravity="center"
         >
 
         <com.google.android.material.textfield.TextInputLayout
@@ -63,7 +59,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Fitness name"
-            android:layout_marginTop="16dp"
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -94,20 +89,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="30dp"
         android:text="Birthdate"
-        android:textColor="@color/black"
-        android:textSize="24dp" />
+        style="@style/page_title"
+
+        />
 
     <include
-        android:layout_marginTop="30dp"
         layout="@layout/datepicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
         />
 
     <Button

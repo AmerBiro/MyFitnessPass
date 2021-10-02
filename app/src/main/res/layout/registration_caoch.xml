@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/linear_layout_main_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registration.Caoch"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".registration.Caoch">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:layout_height="wrap_content">
 
         <TextView
+            style="@style/page_counter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="5/6"
-            android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:text="5/6" />
 
         <Button
             android:layout_width="65dp"
@@ -31,81 +29,67 @@
 
 
     <TextView
+        style="@style/page_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:text="Skip this page or fill out the contact information of your coach"
-        android:textSize="18sp" />
+        android:text="Skip this page or fill out the contact information of your coach" />
 
     <TextView
+        style="@style/page_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Coach"
-        style="@style/page_title"
-        />
+        android:text="Coach" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginLeft="24dp"
         android:gravity="center"
-        >
+        android:orientation="vertical">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            >
+            android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="145dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:hint="First name"
-                android:layout_marginRight="8dp"
                 app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="145dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="145dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:hint="Last name"
-                android:layout_marginLeft="8dp"
                 app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="145dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-
-        </LinearLayout>
-
+        </RelativeLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email address"
             android:layout_marginTop="16dp"
+            android:hint="Email address"
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -119,8 +103,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Phone"
             android:layout_marginTop="16dp"
+            android:hint="Phone"
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -130,19 +114,16 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
     </LinearLayout>
 
 
     <Button
         android:layout_width="40dp"
         android:layout_height="20dp"
-        android:background="@drawable/ic_skip"
         android:layout_gravity="right"
-        android:layout_marginRight="30dp"
         android:layout_marginTop="120dp"
-        />
-
+        android:layout_marginRight="30dp"
+        android:background="@drawable/ic_skip" />
 
 
 </LinearLayout>
