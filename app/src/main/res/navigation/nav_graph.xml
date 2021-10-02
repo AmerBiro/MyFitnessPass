@@ -12,7 +12,8 @@
         tools:layout="@layout/registration_splash_screen" >
         <action
             android:id="@+id/action_registrationSplashScreen_to_registration"
-            app:destination="@id/registration" />
+            app:destination="@id/registration"
+            />
     </fragment>
     <fragment
         android:id="@+id/registration"
@@ -21,7 +22,8 @@
         tools:layout="@layout/registration_registration" >
         <action
             android:id="@+id/action_registration_to_personal"
-            app:destination="@id/personal" />
+            app:destination="@id/personal"
+            />
     </fragment>
     <fragment
         android:id="@+id/personal"

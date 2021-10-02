@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import my.fitness.myfitness.R
 import my.fitness.myfitness.databinding.RegistrationPersonalBinding
 
@@ -29,5 +30,16 @@ class Personal : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        arrows()
+
+    }
+
+    fun arrows(){
+        binding.buttonBackArrow.setOnClickListener {
+            findNavController().navigate(R.id.action_personal_to_registration)
+        }
+        binding.buttonNextArrow.setOnClickListener {
+            findNavController().navigate(R.id.action_personal_to_personal2)
+        }
     }
 }

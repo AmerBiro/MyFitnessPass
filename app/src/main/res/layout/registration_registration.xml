@@ -72,16 +72,16 @@
         >
 
         <TextView
+            android:id="@+id/button_forgot_password"
+            style="@style/page_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Forgot password?"
-            style="@style/page_subtitle"
             android:layout_alignParentLeft="true"
             android:layout_centerInParent="true"
-            />
+            android:text="Forgot password?" />
 
         <Button
-            android:id="@+id/login_button"
+            android:id="@+id/button_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -107,6 +107,7 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/button_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Register"
@@ -136,6 +137,7 @@
         >
 
         <Button
+            android:id="@+id/button_google"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_google"
@@ -143,6 +145,7 @@
             />
 
         <Button
+            android:id="@+id/button_facebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16sp"

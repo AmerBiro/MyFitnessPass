@@ -2,16 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/linear_layout_main_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/linear_layout_main_page"
-    tools:context=".registration.Body"
-    >
+    tools:context=".registration.Body">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <TextView
             style="@style/page_counter"
@@ -21,6 +19,7 @@
             android:text="3/6" />
 
         <Button
+            android:id="@+id/button_next_arrow"
             android:layout_width="65dp"
             android:layout_height="25dp"
             android:layout_alignParentRight="true"
@@ -29,94 +28,85 @@
 
 
     <TextView
+        style="@style/page_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/page_description"
-        android:text="Skip this page, or fill out your height and weight data to keep tracking your growth"
-        />
+        android:text="Skip this page, or fill out your height and weight data to keep tracking your growth" />
 
     <TextView
+        style="@style/page_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Body"
-        style="@style/page_title"
-        />
+        android:text="Body" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="How tall are you?"
-            style="@style/body"
-            />
+        android:orientation="horizontal">
 
         <TextView
+            style="@style/body"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="187 cm"
-            android:layout_marginLeft="16sp"
+            android:text="How tall are you?" />
+
+        <TextView
             style="@style/body"
-            android:textColor="@color/black"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:text="187 cm"
+            android:textColor="@color/black" />
 
     </LinearLayout>
 
 
     <com.google.android.material.slider.Slider
+        style="@style/slider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:value="150.0"
         android:valueFrom="100.0"
-        android:valueTo="225.0"
-        style="@style/slider"
-        />
-
+        android:valueTo="225.0" />
 
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="How much do you weigh?"
-            style="@style/body"
-            />
+        android:orientation="horizontal">
 
         <TextView
+            style="@style/body"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="87 kg"
-            android:layout_marginLeft="16sp"
+            android:text="How much do you weigh?" />
+
+        <TextView
             style="@style/body"
-            android:textColor="@color/black"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:text="87 kg"
+            android:textColor="@color/black" />
 
     </LinearLayout>
 
 
     <com.google.android.material.slider.Slider
+        style="@style/slider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:value="50.0"
         android:valueFrom="40.0"
-        android:valueTo="200.0"
-        style="@style/slider"
-        />
+        android:valueTo="200.0" />
 
     <Button
+        android:id="@+id/button_skip"
         android:layout_width="40dp"
         android:layout_height="20dp"
-        android:background="@drawable/ic_skip"
         android:layout_gravity="right"
-        android:layout_marginRight="30dp"
         android:layout_marginTop="120dp"
-        />
+        android:layout_marginRight="30dp"
+        android:background="@drawable/ic_skip" />
 
 </LinearLayout>

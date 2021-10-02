@@ -13,6 +13,7 @@
         >
 
         <Button
+            android:id="@+id/button_back_arrow"
             android:layout_width="65dp"
             android:layout_height="25dp"
             android:layout_alignParentLeft="true"
@@ -27,6 +28,7 @@
             />
 
         <Button
+            android:id="@+id/button_next_arrow"
             android:layout_width="65dp"
             android:layout_height="25dp"
             android:layout_alignParentRight="true"

@@ -22,6 +22,7 @@
             />
 
         <Button
+            android:id="@+id/button_next_arrow"
             android:layout_width="65dp"
             android:layout_height="25dp"
             android:layout_alignParentRight="true"
@@ -102,6 +103,7 @@
         />
 
     <Button
+        android:id="@+id/button_skip"
         android:layout_width="40dp"
         android:layout_height="20dp"
         android:background="@drawable/ic_skip"

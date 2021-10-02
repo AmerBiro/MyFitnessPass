@@ -21,6 +21,7 @@
             />
 
         <LinearLayout
+            android:id="@+id/button_done_arrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -62,6 +63,7 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:layout_gravity="center"
@@ -69,12 +71,14 @@
         app:cardCornerRadius="20sp">
 
         <Button
+            android:id="@+id/button_add_photo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/ic_add_photo" />
 
         <ImageView
+            android:id="@+id/place_holder"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -82,6 +86,7 @@
 
 
     <Button
+        android:id="@+id/button_skip"
         android:layout_width="40dp"
         android:layout_height="20dp"
         android:layout_gravity="right"

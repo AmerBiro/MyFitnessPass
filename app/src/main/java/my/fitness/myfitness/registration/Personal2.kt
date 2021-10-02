@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import my.fitness.myfitness.R
 import my.fitness.myfitness.databinding.RegistrationPersonal2Binding
 import my.fitness.myfitness.databinding.RegistrationPersonalBinding
@@ -31,5 +33,18 @@ class Personal2 : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        buttons()
+    }
+
+    fun buttons(){
+        binding.buttonNextArrow.setOnClickListener{
+            findNavController().navigate(R.id.action_personal2_to_body2)
+        }
+        binding.buttonMale.setOnClickListener{
+            Toast.makeText(getActivity(), "Not yet implemented", 0).show()
+        }
+        binding.buttonFemale.setOnClickListener{
+            Toast.makeText(getActivity(), "Not yet implemented", 0).show()
+        }
     }
 }

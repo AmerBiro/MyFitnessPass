@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import my.fitness.myfitness.R
 import my.fitness.myfitness.databinding.RegistrationCaochBinding
 
@@ -29,5 +30,15 @@ class Caoch : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        mover()
+    }
+
+    fun mover(){
+        binding.buttonNextArrow.setOnClickListener{
+            findNavController().navigate(R.id.action_caoch2_to_profilePhoto2)
+        }
+        binding.buttonSkip.setOnClickListener{
+            findNavController().navigate(R.id.action_caoch2_to_profilePhoto2)
+        }
     }
 }
