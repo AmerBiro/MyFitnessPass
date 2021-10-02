@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/splash_screen"
+    android:background="@drawable/ic_splash_screen"
     tools:context=".registration.RegistrationSplashScreen">
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="@style/page_title"
+        android:layout_alignTop="@+id/animationView"
+        android:text="MyFitnessPass" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
@@ -14,6 +23,7 @@
         android:layout_height="wrap_content"
         app:lottie_rawRes="@raw/heart_beat"
         app:lottie_autoPlay="true"
+        android:layout_centerInParent="true"
         app:lottie_loop="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,5 +31,4 @@
         android:layout_marginTop="200dp"
         />
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
