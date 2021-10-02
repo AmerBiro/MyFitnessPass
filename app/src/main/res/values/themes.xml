@@ -50,12 +50,12 @@
 
 
     <style name="slider">
-        <item name="tickColor">@color/white</item>
-        <item name="thumbColor">@color/white</item>
-        <item name="haloColor">@color/blue</item>
-        <item name="trackColor">@color/blue</item>
-        <item name="thumbElevation">20dp</item>
-        <item name="thumbRadius">14dp</item>
+        <item name="thumbColor">@color/blue</item>
+        <item name="trackColorActive">@color/blue</item>
+        <item name="trackColorInactive">#C8C1C1</item>
+        <item name="haloColor">#FFFFFF</item>
+
+
     </style>
 
 
