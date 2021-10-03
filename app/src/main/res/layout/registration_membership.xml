@@ -96,7 +96,7 @@
         />
 
     <include
-        layout="@layout/datepicker"
+        layout="@layout/button_date_picker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

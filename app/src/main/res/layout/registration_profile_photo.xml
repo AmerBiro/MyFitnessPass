@@ -68,7 +68,8 @@
         android:layout_height="170dp"
         android:layout_gravity="center"
         android:layout_margin="30dp"
-        app:cardCornerRadius="20sp">
+        app:cardCornerRadius="20sp"
+        >
 
         <Button
             android:id="@+id/button_add_photo"
