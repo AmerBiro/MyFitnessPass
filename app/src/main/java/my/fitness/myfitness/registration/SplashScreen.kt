@@ -5,8 +5,13 @@ import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import my.fitness.myfitness.R
 import my.fitness.myfitness.databinding.RegistrationSplashScreenBinding
 
@@ -15,7 +20,6 @@ class RegistrationSplashScreen : Fragment() {
 
     private var _binding: RegistrationSplashScreenBinding? = null
     private val binding get() = _binding!!
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,6 +40,7 @@ class RegistrationSplashScreen : Fragment() {
         handler()
     }
 
+
     fun handler() {
         var x = Runnable {
             findNavController().navigate(R.id.registration)
@@ -44,6 +49,7 @@ class RegistrationSplashScreen : Fragment() {
         var y = Handler()
         y.postDelayed(x, 3000)
     }
+
 
 
 }

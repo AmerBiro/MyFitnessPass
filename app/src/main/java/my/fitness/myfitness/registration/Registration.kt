@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
 import my.fitness.myfitness.R
 import my.fitness.myfitness.databinding.RegistrationRegistrationBinding
 
@@ -16,6 +16,7 @@ class Registration : Fragment() {
 
     private var _binding: RegistrationRegistrationBinding? = null
     private val binding get() = _binding!!
+    private val ref = FirebaseAuth.getInstance()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,13 +39,25 @@ class Registration : Fragment() {
 
     fun buttons() {
         binding.buttonRegister.setOnClickListener {
-            findNavController().navigate(R.id.action_registration_to_personal)
+            ref.createUserWithEmailAndPassword(
+                binding.username.text.toString().trim(),
+                binding.password.text.toString().trim()
+            ).addOnCompleteListener{
+                findNavController().navigate(R.id.action_registration_to_home2)
+                Toast.makeText(activity, "Not yet implemented", 0).show()
+            }
         }
         binding.buttonForgotPassword.setOnClickListener {
             Toast.makeText(getActivity(), "Not yet implemented", 0).show()
         }
         binding.buttonLogin.setOnClickListener {
-            Toast.makeText(getActivity(), "Not yet implemented", 0).show()
+            ref.signInWithEmailAndPassword(
+                binding.username.text.toString().trim(),
+                binding.password.text.toString().trim()
+            ).addOnCompleteListener{
+                Toast.makeText(activity, "Not yet implemented", 0).show()
+                findNavController().navigate(R.id.action_registration_to_home2)
+            }
         }
         binding.buttonGoogle.setOnClickListener {
             Toast.makeText(getActivity(), "Not yet implemented", 0).show()

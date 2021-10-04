@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/profilePhoto2">
+    app:startDestination="@id/registrationSplashScreen">
     <fragment
         android:id="@+id/registrationSplashScreen"
         android:name="my.fitness.myfitness.registration.RegistrationSplashScreen"
@@ -14,6 +14,9 @@
             android:id="@+id/action_registrationSplashScreen_to_registration"
             app:destination="@id/registration"
             />
+        <action
+            android:id="@+id/action_registrationSplashScreen_to_home2"
+            app:destination="@id/home2" />
     </fragment>
     <fragment
         android:id="@+id/registration"
@@ -24,6 +27,9 @@
             android:id="@+id/action_registration_to_personal"
             app:destination="@id/personal"
             />
+        <action
+            android:id="@+id/action_registration_to_home2"
+            app:destination="@id/home2" />
     </fragment>
     <fragment
         android:id="@+id/personal"
@@ -77,5 +83,14 @@
         android:id="@+id/profilePhoto2"
         android:name="my.fitness.myfitness.registration.ProfilePhoto"
         android:label="registration_profile_photo"
-        tools:layout="@layout/registration_profile_photo" />
+        tools:layout="@layout/registration_profile_photo" >
+        <action
+            android:id="@+id/action_profilePhoto2_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="my.fitness.myfitness.main_app.Home"
+        android:label="main_app_home"
+        tools:layout="@layout/main_app_home" />
 </navigation>
