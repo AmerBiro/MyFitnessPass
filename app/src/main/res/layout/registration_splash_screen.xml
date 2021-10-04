@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/ic_splash_screen"
-    tools:context=".registration.RegistrationSplashScreen">
+    android:orientation="vertical"
+    tools:context=".registration.RegistrationSplashScreen"
+    android:gravity="center"
+    >
 
     <TextView
         android:id="@+id/app_name"
+        style="@style/page_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        style="@style/page_title"
-        android:layout_alignTop="@+id/animationView"
-        android:text="MyFitnessPass" />
+        android:text="MyFitnessPass"
+        />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:lottie_rawRes="@raw/heart_beat"
         app:lottie_autoPlay="true"
-        android:layout_centerInParent="true"
         app:lottie_loop="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="200dp"
+        app:lottie_rawRes="@raw/heart_beat"
         />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/account_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:layout_marginBottom="150dp"
+        android:textColor="@color/blue"
+        />
+
+</LinearLayout>
