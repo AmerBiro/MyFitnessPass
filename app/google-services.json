@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "633992471584",
+    "project_id": "myfitnesspass-c7a87",
+    "storage_bucket": "myfitnesspass-c7a87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633992471584:android:08c2a6832650ace725c845",
+        "android_client_info": {
+          "package_name": "my.fitness.myfitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633992471584-p7n2p81u0p4tb3oav6iq5oa5h62ll2ht.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "my.fitness.myfitness",
+            "certificate_hash": "6811a0a58acf712fa463bf619d50c749ce3a4566"
+          }
+        },
+        {
+          "client_id": "633992471584-edra76reepf627mhg2jooqsg82dp6si9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQlzCFA5-NSqQfj_KHJhNOCIPLj44s2lk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633992471584-edra76reepf627mhg2jooqsg82dp6si9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
