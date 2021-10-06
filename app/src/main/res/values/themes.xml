@@ -54,10 +54,7 @@
         <item name="trackColorActive">@color/blue</item>
         <item name="trackColorInactive">#C8C1C1</item>
         <item name="haloColor">#FFFFFF</item>
-
-
     </style>
-
 
 
 </resources>

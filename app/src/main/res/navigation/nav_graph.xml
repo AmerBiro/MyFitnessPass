@@ -13,6 +13,8 @@
         <action
             android:id="@+id/action_registrationSplashScreen_to_registration"
             app:destination="@id/registration"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/registrationSplashScreen"
             />
         <action
             android:id="@+id/action_registrationSplashScreen_to_home2"
