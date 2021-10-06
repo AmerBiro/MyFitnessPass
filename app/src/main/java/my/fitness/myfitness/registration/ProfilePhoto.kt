@@ -1,5 +1,6 @@
 package my.fitness.myfitness.registration
 
+import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -38,8 +39,10 @@ class ProfilePhoto : Fragment() {
         binding.buttonDoneArrow.setOnClickListener{
             Toast.makeText(getActivity(), "Not yet implemented", 0).show()
         }
-        binding.placeHolder.setOnClickListener{
-            Toast.makeText(getActivity(), "Not yet implemented", 0).show()
+        binding.image.setOnClickListener{
+            val dialog = Dialog(requireActivity())
+            dialog.setContentView(R.layout.dialog_choose_photo)
+            dialog.show()
         }
         binding.buttonSkip.setOnClickListener{
             Toast.makeText(getActivity(), "Not yet implemented", 0).show()

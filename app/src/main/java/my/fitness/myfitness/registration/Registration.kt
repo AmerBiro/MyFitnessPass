@@ -1,7 +1,9 @@
 package my.fitness.myfitness.registration
 
-import android.content.Context
+import android.app.Dialog
+import android.content.ContentValues
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,12 +13,14 @@ import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import my.fitness.myfitness.R
 import my.fitness.myfitness.databinding.RegistrationRegistrationBinding
+import my.fitness.myfitness.functions.User
 
 class Registration : Fragment() {
 
     private var _binding: RegistrationRegistrationBinding? = null
     private val binding get() = _binding!!
     private val ref = FirebaseAuth.getInstance()
+    private var user: User? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,6 +34,7 @@ class Registration : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        user = User()
     }
 
     override fun onStart() {
@@ -38,32 +43,31 @@ class Registration : Fragment() {
     }
 
     fun buttons() {
-        binding.buttonRegister.setOnClickListener {
-            ref.createUserWithEmailAndPassword(
-                binding.username.text.toString().trim(),
-                binding.password.text.toString().trim()
-            ).addOnCompleteListener{
-                findNavController().navigate(R.id.action_registration_to_home2)
-                Toast.makeText(activity, "Not yet implemented", 0).show()
+        binding.apply {
+            buttonForgotPassword.setOnClickListener {
+                val dialog = Dialog(requireActivity())
+                dialog.setContentView(R.layout.dialog_forgot_password)
+                dialog.show()
+
+            }
+            buttonLogin.setOnClickListener {
+                user?.signIn(
+                    username.text.toString().trim(),
+                    password.text.toString().trim(),
+                    it,
+                    R.id.action_registration_to_home2
+                )
+            }
+            buttonRegister.setOnClickListener {
+                findNavController().navigate(R.id.action_registration_to_personal)
+            }
+            buttonGoogle.setOnClickListener {
+                Toast.makeText(getActivity(), "Not yet implemented", 0).show()
+            }
+            buttonFacebook.setOnClickListener {
+                Toast.makeText(getActivity(), "Not yet implemented", 0).show()
             }
         }
-        binding.buttonForgotPassword.setOnClickListener {
-            Toast.makeText(getActivity(), "Not yet implemented", 0).show()
-        }
-        binding.buttonLogin.setOnClickListener {
-            ref.signInWithEmailAndPassword(
-                binding.username.text.toString().trim(),
-                binding.password.text.toString().trim()
-            ).addOnCompleteListener{
-                Toast.makeText(activity, "Not yet implemented", 0).show()
-                findNavController().navigate(R.id.action_registration_to_home2)
-            }
-        }
-        binding.buttonGoogle.setOnClickListener {
-            Toast.makeText(getActivity(), "Not yet implemented", 0).show()
-        }
-        binding.buttonFacebook.setOnClickListener {
-            Toast.makeText(getActivity(), "Not yet implemented", 0).show()
-        }
+
     }
 }
