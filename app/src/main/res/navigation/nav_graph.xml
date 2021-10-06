@@ -28,6 +28,8 @@
         <action
             android:id="@+id/action_registration_to_personal"
             app:destination="@id/personal"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
             />
         <action
             android:id="@+id/action_registration_to_home2"

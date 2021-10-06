@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth
 import my.fitness.myfitness.R
 import my.fitness.myfitness.databinding.RegistrationRegistrationBinding
 import my.fitness.myfitness.functions.User
+import my.fitness.myfitness.functions.user.ForgotPassword
 
 class Registration : Fragment() {
 
@@ -21,6 +22,7 @@ class Registration : Fragment() {
     private val binding get() = _binding!!
     private val ref = FirebaseAuth.getInstance()
     private var user: User? = null
+    private var forgotPassword : ForgotPassword?=null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,6 +37,7 @@ class Registration : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         user = User()
+        forgotPassword = ForgotPassword()
     }
 
     override fun onStart() {
@@ -45,19 +48,12 @@ class Registration : Fragment() {
     fun buttons() {
         binding.apply {
             buttonForgotPassword.setOnClickListener {
-                val dialog = Dialog(requireActivity())
-                dialog.setContentView(R.layout.dialog_forgot_password)
-                dialog.show()
+                forgotPassword?.forgotPassword(requireActivity())
+            }
 
-            }
             buttonLogin.setOnClickListener {
-                user?.signIn(
-                    username.text.toString().trim(),
-                    password.text.toString().trim(),
-                    it,
-                    R.id.action_registration_to_home2
-                )
-            }
+                user?.signIn(username, password, it, R.id.action_registration_to_home2, requireActivity()) }
+
             buttonRegister.setOnClickListener {
                 findNavController().navigate(R.id.action_registration_to_personal)
             }

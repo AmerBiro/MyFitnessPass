@@ -2,15 +2,15 @@ package my.fitness.myfitness.functions
 
 import android.app.Activity
 import android.view.View
-import androidx.navigation.NavController
+import android.widget.EditText
 
 interface IUser {
 
-    fun createUser(username : String, password : String)
+    fun createUser(username: EditText, password: EditText, view: View, destination: Int, activity : Activity)
 
-    fun signIn(username: String, password: String, view : View, destination : Int)
+    fun signIn(username: EditText, password: EditText, view: View, destination: Int, activity : Activity)
 
-    fun signOut()
+    fun signOut(view: View, destination: Int, activity: Activity)
 
     fun verify()
 
