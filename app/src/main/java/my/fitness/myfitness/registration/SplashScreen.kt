@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.google.firebase.auth.FirebaseAuth
 import my.fitness.myfitness.R
 import my.fitness.myfitness.databinding.RegistrationSplashScreenBinding
 
@@ -16,7 +15,7 @@ class RegistrationSplashScreen : Fragment() {
 
     private lateinit var _binding: RegistrationSplashScreenBinding
     private val binding get() = _binding!!
-    private var user = FirebaseAuth.getInstance().currentUser
+    private var user = null
     private var handler = Handler()
     private var duration : Int = 3000
 
