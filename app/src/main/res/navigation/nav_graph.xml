@@ -40,11 +40,11 @@
         android:label="registration_personal"
         tools:layout="@layout/registration_personal" >
         <action
-            android:id="@+id/action_personal_to_personal2"
-            app:destination="@id/personal2" />
-        <action
             android:id="@+id/action_personal_to_registration"
             app:destination="@id/registration" />
+        <action
+            android:id="@+id/action_personal_to_home2"
+            app:destination="@id/home2" />
     </fragment>
     <fragment
         android:id="@+id/personal2"

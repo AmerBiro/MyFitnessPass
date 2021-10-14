@@ -40,6 +40,10 @@ class Personal : Fragment() {
             //todo: need to fix back stack
         }
 
+        binding.buttonSignup.setOnClickListener {
+            findNavController().navigate(R.id.action_personal_to_home2)
+        }
+
 
     }
 }
