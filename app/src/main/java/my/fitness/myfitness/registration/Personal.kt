@@ -30,16 +30,16 @@ class Personal : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        arrows()
+        buttons()
 
     }
 
-    fun arrows(){
+    fun buttons(){
         binding.buttonBackArrow.setOnClickListener {
             findNavController().navigate(R.id.action_personal_to_registration)
+            //todo: need to fix back stack
         }
-        binding.buttonNextArrow.setOnClickListener {
-            findNavController().navigate(R.id.action_personal_to_personal2)
-        }
+
+
     }
 }

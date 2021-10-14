@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.MyFitness" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <!-- Primary brand color. -->
-       <item name="colorPrimary">@color/purple_200</item>
+       <item name="colorPrimary">#2196F3</item>
         <item name="colorPrimaryVariant">#008C8A8A</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->

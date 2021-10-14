@@ -1,16 +1,12 @@
 package my.fitness.myfitness.registration
 
-import android.app.Dialog
-import android.content.ContentValues
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.google.firebase.auth.FirebaseAuth
 import my.fitness.myfitness.R
 import my.fitness.myfitness.databinding.RegistrationRegistrationBinding
 import my.fitness.myfitness.functions.User
@@ -20,7 +16,6 @@ class Registration : Fragment() {
 
     private var _binding: RegistrationRegistrationBinding? = null
     private val binding get() = _binding!!
-    private val ref = FirebaseAuth.getInstance()
     private var user: User? = null
     private var forgotPassword : ForgotPassword?=null
 
@@ -58,10 +53,10 @@ class Registration : Fragment() {
                 findNavController().navigate(R.id.action_registration_to_personal)
             }
             buttonGoogle.setOnClickListener {
-                Toast.makeText(getActivity(), "Not yet implemented", 0).show()
+                Toast.makeText(getActivity(), "Not yet implemented", Toast.LENGTH_SHORT).show()
             }
             buttonFacebook.setOnClickListener {
-                Toast.makeText(getActivity(), "Not yet implemented", 0).show()
+                Toast.makeText(getActivity(), "Not yet implemented", Toast.LENGTH_SHORT).show()
             }
         }
 

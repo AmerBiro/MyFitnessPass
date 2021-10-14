@@ -17,7 +17,7 @@ class RegistrationSplashScreen : Fragment() {
     private val binding get() = _binding!!
     private var user = null
     private var handler = Handler()
-    private var duration : Int = 3000
+    private var duration : Int = 1500
 
     override fun onCreateView(
         inflater: LayoutInflater,
