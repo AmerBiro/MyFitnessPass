@@ -1,4 +1,4 @@
-package my.fitness.myfitness.main_app
+package my.fitness.myfitness.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

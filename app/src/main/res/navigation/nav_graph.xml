@@ -92,7 +92,7 @@
     </fragment>
     <fragment
         android:id="@+id/home2"
-        android:name="my.fitness.myfitness.main_app.Home"
+        android:name="my.fitness.myfitness.home.Home"
         android:label="main_app_home"
         tools:layout="@layout/main_app_home" />
 </navigation>
