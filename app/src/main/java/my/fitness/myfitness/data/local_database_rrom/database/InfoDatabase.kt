@@ -1,16 +1,17 @@
 package my.fitness.myfitness.data.local_database_rrom.database
 
 import androidx.room.Database
+import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.noteapp.database.collections.Info
-import my.fitness.myfitness.data.local_database_rrom.dao.InfoDao
+import my.fitness.myfitness.data.local_database_rrom.entities.Info
+import my.fitness.myfitness.data.local_database_rrom.functions.Converters
 
 @Database(
     entities = [Info::class],
     version = 1
 )
 
-@TypeConverters(Convertors::class)
-abstract class InfoDatabase {
-    abstract fun infoDao(): InfoDao
+@TypeConverters(Converters::class)
+abstract class InfoDatabase : RoomDatabase(){
+//    abstract fun infoDao(): InfoDao
 }

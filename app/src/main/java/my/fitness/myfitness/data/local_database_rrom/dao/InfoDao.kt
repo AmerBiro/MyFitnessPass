@@ -5,7 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.noteapp.database.collections.Info
+import my.fitness.myfitness.data.local_database_rrom.entities.Info
 
 @Dao
 interface InfoDao {

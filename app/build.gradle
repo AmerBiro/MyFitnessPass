@@ -10,6 +10,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs.kotlin"
 apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdk 31
@@ -145,6 +146,7 @@ dependencies {
 
     // Color Picker Dialog
     implementation 'com.github.skydoves:colorpickerview:2.2.3'
+
 }
 
 
