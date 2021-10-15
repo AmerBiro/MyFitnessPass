@@ -52,7 +52,7 @@ interface ProgramAPI {
 
     @POST("/deleteProgram")
     suspend fun deleteProgram(
-        @ Body deleteProgramRequest: DeleteProgramRequest
+        @Body deleteProgramRequest: DeleteProgramRequest
     ): Response<ResponseBody>
 
 }
