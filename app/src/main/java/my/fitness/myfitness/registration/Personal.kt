@@ -36,8 +36,8 @@ class Personal : Fragment() {
 
     fun buttons(){
         binding.buttonBackArrow.setOnClickListener {
-            findNavController().navigate(R.id.action_personal_to_registration)
-            //todo: need to fix back stack
+           // findNavController().navigate(R.id.action_personal_to_registration)
+            requireActivity().onBackPressed()
         }
 
         binding.buttonSignup.setOnClickListener {

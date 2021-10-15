@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
-    style="@style/linear_layout_main_page"
+    android:orientation="vertical"
+    android:background="@color/white"
+
     tools:context=".registration.Personal">
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_margin="16dp"
         android:layout_height="wrap_content">
 
         <Button
@@ -31,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_margin="16dp"
         android:layout_marginTop="30dp">
 
         <LinearLayout
@@ -132,6 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:layout_gravity="right"
         android:background="@drawable/ic_login"
         android:text="Sign up"
