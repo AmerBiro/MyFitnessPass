@@ -56,9 +56,5 @@
         <item name="haloColor">#FFFFFF</item>
     </style>
 
-    <style name="alert_dialog_animation" parent="Animation.AppCompat.Dialog">
-        <item name="android:windowEnterAnimation">@anim/alert_dialog_fade_in</item>
-        <item name="android:windowExitAnimation">@anim/alert_dialog_fade_out</item>
-    </style>
 
 </resources>
