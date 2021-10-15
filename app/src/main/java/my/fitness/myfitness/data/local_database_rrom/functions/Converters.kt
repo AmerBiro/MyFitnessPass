@@ -1,10 +1,10 @@
-package my.fitness.myfitness.database.local_database_rrom.functions
+package my.fitness.myfitness.data.local_database_rrom.functions
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class TypeConvertor {
+class Converters {
 
     @TypeConverter
     fun fromList(list: List<String>): String {

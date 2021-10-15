@@ -1,4 +1,4 @@
-package my.fitness.myfitness.database.local_database_rrom.dao
+package my.fitness.myfitness.data.local_database_rrom.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

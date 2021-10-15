@@ -1,4 +1,4 @@
-package my.fitness.myfitness.database.local_database_rrom.dao
+package my.fitness.myfitness.data.local_database_rrom.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -6,7 +6,6 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.noteapp.database.collections.Info
-import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface InfoDao {
