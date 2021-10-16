@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import my.fitness.myfitness.databinding.RegistrationSplashScreenBinding
+import my.fitness.myfitness.databinding.SplashScreenBinding
 
 
 class RegistrationSplashScreen : Fragment() {
 
-    private lateinit var _binding: RegistrationSplashScreenBinding
+    private lateinit var _binding: SplashScreenBinding
     private val binding get() = _binding!!
     private var handler = Handler()
     private var duration : Int = 3000
@@ -21,7 +21,7 @@ class RegistrationSplashScreen : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = RegistrationSplashScreenBinding.inflate(inflater, container, false)
+        _binding = SplashScreenBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
