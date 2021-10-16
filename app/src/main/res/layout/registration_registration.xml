@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/linear_layout_main_page"
-    tools:context=".registration.Registration">
+    tools:context=".ui.registration.Registration">
 
     <TextView
         android:layout_width="wrap_content"

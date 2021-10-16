@@ -7,7 +7,7 @@
     app:startDestination="@id/registrationSplashScreen">
     <fragment
         android:id="@+id/registrationSplashScreen"
-        android:name="my.fitness.myfitness.registration.RegistrationSplashScreen"
+        android:name="my.fitness.myfitness.ui.registration.RegistrationSplashScreen"
         android:label="registration_splash_screen"
         tools:layout="@layout/registration_splash_screen" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/registration"
-        android:name="my.fitness.myfitness.registration.Registration"
+        android:name="my.fitness.myfitness.ui.registration.Registration"
         android:label="registration_registration"
         tools:layout="@layout/registration_registration" >
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/personal"
-        android:name="my.fitness.myfitness.registration.Personal"
+        android:name="my.fitness.myfitness.ui.registration.Personal"
         android:label="registration_personal"
         tools:layout="@layout/registration_personal" >
         <action
@@ -47,7 +47,7 @@
     </fragment>
     <fragment
         android:id="@+id/personal2"
-        android:name="my.fitness.myfitness.registration.Personal2"
+        android:name="my.fitness.myfitness.ui.registration.Personal2"
         android:label="registration_personal2"
         tools:layout="@layout/registration_personal2" >
         <action
@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/body2"
-        android:name="my.fitness.myfitness.registration.Body"
+        android:name="my.fitness.myfitness.ui.registration.Body"
         android:label="registration_body"
         tools:layout="@layout/registration_body" >
         <action
@@ -65,7 +65,7 @@
     </fragment>
     <fragment
         android:id="@+id/membership"
-        android:name="my.fitness.myfitness.registration.Membership"
+        android:name="my.fitness.myfitness.ui.registration.Membership"
         android:label="registration_membership"
         tools:layout="@layout/registration_membership" >
         <action
@@ -74,7 +74,7 @@
     </fragment>
     <fragment
         android:id="@+id/caoch2"
-        android:name="my.fitness.myfitness.registration.Caoch"
+        android:name="my.fitness.myfitness.ui.registration.Caoch"
         android:label="registration_caoch"
         tools:layout="@layout/registration_caoch" >
         <action
@@ -83,7 +83,7 @@
     </fragment>
     <fragment
         android:id="@+id/profilePhoto2"
-        android:name="my.fitness.myfitness.registration.ProfilePhoto"
+        android:name="my.fitness.myfitness.ui.registration.ProfilePhoto"
         android:label="registration_profile_photo"
         tools:layout="@layout/registration_profile_photo" >
         <action
@@ -92,7 +92,7 @@
     </fragment>
     <fragment
         android:id="@+id/home2"
-        android:name="my.fitness.myfitness.home.Home"
+        android:name="my.fitness.myfitness.ui.home.Home"
         android:label="main_app_home"
         tools:layout="@layout/main_app_home" />
 </navigation>

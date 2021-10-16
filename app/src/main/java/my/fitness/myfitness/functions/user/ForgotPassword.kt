@@ -11,7 +11,6 @@ import my.fitness.myfitness.R
 import com.google.firebase.auth.FirebaseAuth
 
 class ForgotPassword {
-    private var user: FirebaseAuth = FirebaseAuth.getInstance()
 
     fun forgotPassword(activity: Activity) {
         // initializing alert dialog
@@ -32,17 +31,17 @@ class ForgotPassword {
         // reset password function
         resetButton.setOnClickListener {
             var input = inputE.text.toString()
-            if (input.trim().isNotEmpty()){
-                user.sendPasswordResetEmail(input).addOnSuccessListener {
-                    Log.d(TAG, "forgotPassword: successfully")
-                    Toast.makeText(activity, "We've sent you a reset password link", 0).show()
-                    dialog.cancel()
-                }.addOnFailureListener {
-                    Log.d(TAG, "forgotPassword: ${it.message}")
-                    Toast.makeText(activity, "Reset password failed", 0).show()
-                }
-            }else
-                Toast.makeText(activity, "Invalid input!", 0).show()
+//            if (input.trim().isNotEmpty()){
+//                user.sendPasswordResetEmail(input).addOnSuccessListener {
+//                    Log.d(TAG, "forgotPassword: successfully")
+//                    Toast.makeText(activity, "We've sent you a reset password link", 0).show()
+//                    dialog.cancel()
+//                }.addOnFailureListener {
+//                    Log.d(TAG, "forgotPassword: ${it.message}")
+//                    Toast.makeText(activity, "Reset password failed", 0).show()
+//                }
+//            }else
+//                Toast.makeText(activity, "Invalid input!", 0).show()
         }
 
     }
