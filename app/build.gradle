@@ -148,6 +148,9 @@ dependencies {
     // Color Picker Dialog
     implementation 'com.github.skydoves:colorpickerview:2.2.3'
 
+    // viewpager2
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
 }
 
 
