@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import my.fitness.myfitness.R
-import my.fitness.myfitness.databinding.RegistrationMembershipBinding
+import my.fitness.myfitness.databinding.ProfileMembershipBinding
 
 class Membership : Fragment() {
 
-    private var _binding: RegistrationMembershipBinding? = null
+    private var _binding: ProfileMembershipBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,7 +19,7 @@ class Membership : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = RegistrationMembershipBinding.inflate(inflater, container, false)
+        _binding = ProfileMembershipBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
@@ -30,15 +30,15 @@ class Membership : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        mover()
+//        mover()
     }
 
-    fun mover(){
-        binding.buttonNextArrow.setOnClickListener{
-            findNavController().navigate(R.id.action_membership_to_caoch2)
-        }
-        binding.buttonSkip.setOnClickListener{
-            findNavController().navigate(R.id.action_membership_to_caoch2)
-        }
-    }
+//    fun mover(){
+//        binding.buttonNextArrow.setOnClickListener{
+//            findNavController().navigate(R.id.action_membership_to_caoch2)
+//        }
+//        binding.buttonSkip.setOnClickListener{
+//            findNavController().navigate(R.id.action_membership_to_caoch2)
+//        }
+//    }
 }

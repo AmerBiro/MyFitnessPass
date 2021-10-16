@@ -11,7 +11,7 @@ import my.fitness.myfitness.functions.user.ForgotPassword
 
 class Registration : Fragment() {
 
-    private var _binding: RegistrationRegistrationBinding? = null
+    private var _binding: RegistrationBinding? = null
     private val binding get() = _binding!!
     private var forgotPassword : ForgotPassword?=null
 

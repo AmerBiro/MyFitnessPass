@@ -9,7 +9,7 @@
         android:id="@+id/registrationSplashScreen"
         android:name="my.fitness.myfitness.ui.registration.RegistrationSplashScreen"
         android:label="registration_splash_screen"
-        tools:layout="@layout/registration_splash_screen" >
+        tools:layout="@layout/splash_screen" >
         <action
             android:id="@+id/action_registrationSplashScreen_to_registration"
             app:destination="@id/registration"
@@ -17,82 +17,62 @@
             app:popUpTo="@id/registrationSplashScreen"
             />
         <action
-            android:id="@+id/action_registrationSplashScreen_to_home2"
-            app:destination="@id/home2" />
+            android:id="@+id/action_registrationSplashScreen_to_home"
+            app:destination="@id/home" />
     </fragment>
     <fragment
         android:id="@+id/registration"
         android:name="my.fitness.myfitness.ui.registration.Registration"
         android:label="registration_registration"
-        tools:layout="@layout/registration_registration" >
+        tools:layout="@layout/auth_login" >
         <action
             android:id="@+id/action_registration_to_personal"
             app:destination="@id/personal"
             />
         <action
-            android:id="@+id/action_registration_to_home2"
-            app:destination="@id/home2" />
+            android:id="@+id/action_registration_to_home"
+            app:destination="@id/home" />
     </fragment>
     <fragment
         android:id="@+id/personal"
-        android:name="my.fitness.myfitness.ui.registration.Personal"
+        android:name="my.fitness.myfitness.ui.registration.SignUp"
         android:label="registration_personal"
-        tools:layout="@layout/registration_personal" >
-        <action
-            android:id="@+id/action_personal_to_personal2"
-            app:destination="@id/personal2" />
+        tools:layout="@layout/auth_sign_up" >
         <action
             android:id="@+id/action_personal_to_registration"
             app:destination="@id/registration" />
+        <action
+            android:id="@+id/action_personal_to_home"
+            app:destination="@id/home" />
     </fragment>
     <fragment
         android:id="@+id/personal2"
         android:name="my.fitness.myfitness.ui.registration.Personal2"
         android:label="registration_personal2"
-        tools:layout="@layout/registration_personal2" >
-        <action
-            android:id="@+id/action_personal2_to_body2"
-            app:destination="@id/body2" />
-    </fragment>
+        tools:layout="@layout/registration_personal2" />
     <fragment
-        android:id="@+id/body2"
+        android:id="@+id/body"
         android:name="my.fitness.myfitness.ui.registration.Body"
         android:label="registration_body"
-        tools:layout="@layout/registration_body" >
-        <action
-            android:id="@+id/action_body2_to_membership"
-            app:destination="@id/membership" />
-    </fragment>
+        tools:layout="@layout/profile_body" />
     <fragment
         android:id="@+id/membership"
         android:name="my.fitness.myfitness.ui.registration.Membership"
         android:label="registration_membership"
-        tools:layout="@layout/registration_membership" >
-        <action
-            android:id="@+id/action_membership_to_caoch2"
-            app:destination="@id/caoch2" />
-    </fragment>
+        tools:layout="@layout/profile_membership" />
     <fragment
-        android:id="@+id/caoch2"
+        android:id="@+id/caoch"
         android:name="my.fitness.myfitness.ui.registration.Caoch"
         android:label="registration_caoch"
-        tools:layout="@layout/registration_caoch" >
-        <action
-            android:id="@+id/action_caoch2_to_profilePhoto2"
-            app:destination="@id/profilePhoto2" />
-    </fragment>
+        tools:layout="@layout/coach" />
     <fragment
-        android:id="@+id/profilePhoto2"
+        android:id="@+id/profilePhoto"
         android:name="my.fitness.myfitness.ui.registration.ProfilePhoto"
         android:label="registration_profile_photo"
-        tools:layout="@layout/registration_profile_photo" >
-        <action
-            android:id="@+id/action_profilePhoto2_to_home2"
-            app:destination="@id/home2" />
-    </fragment>
+        tools:layout="@layout/profile_photo" />
     <fragment
-        android:id="@+id/home2"
+        android:id="@+id/home"
         android:name="my.fitness.myfitness.ui.home.Home"
         android:label="main_app_home"
-        tools:layout="@layout/main_app_home" />
+        tools:layout="@layout/programs" />
 </navigation>

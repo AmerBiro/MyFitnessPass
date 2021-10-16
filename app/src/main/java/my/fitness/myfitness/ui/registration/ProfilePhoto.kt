@@ -7,13 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.fragment.findNavController
 import my.fitness.myfitness.R
-import my.fitness.myfitness.databinding.RegistrationProfilePhotoBinding
+import my.fitness.myfitness.databinding.ProfilePhotoBinding
 
 class ProfilePhoto : Fragment() {
 
-    private var _binding: RegistrationProfilePhotoBinding? = null
+    private var _binding: ProfilePhotoBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -21,7 +20,7 @@ class ProfilePhoto : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = RegistrationProfilePhotoBinding.inflate(inflater, container, false)
+        _binding = ProfilePhotoBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }

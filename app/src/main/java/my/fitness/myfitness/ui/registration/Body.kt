@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import my.fitness.myfitness.R
-import my.fitness.myfitness.databinding.RegistrationBodyBinding
+import my.fitness.myfitness.databinding.AuthLoginBinding
 
 class Body : Fragment() {
 
-    private var _binding: RegistrationBodyBinding? = null
+    private var _binding: AuthLoginBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,7 +19,7 @@ class Body : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = RegistrationBodyBinding.inflate(inflater, container, false)
+        _binding = AuthLoginBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
@@ -30,15 +30,15 @@ class Body : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        mover()
+//        mover()
     }
 
-    fun mover(){
-        binding.buttonNextArrow.setOnClickListener{
-            findNavController().navigate(R.id.action_body2_to_membership)
-        }
-        binding.buttonSkip.setOnClickListener{
-            findNavController().navigate(R.id.action_body2_to_membership)
-        }
-    }
+//    fun mover(){
+//        binding.buttonNextArrow.setOnClickListener{
+//            findNavController().navigate(R.id.action_body2_to_membership)
+//        }
+//        binding.buttonSkip.setOnClickListener{
+//            findNavController().navigate(R.id.action_body2_to_membership)
+//        }
+//    }
 }
