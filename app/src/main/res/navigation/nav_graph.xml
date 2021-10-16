@@ -7,7 +7,7 @@
     app:startDestination="@id/home">
     <fragment
         android:id="@+id/registrationSplashScreen"
-        android:name="my.fitness.myfitness.ui.registration.RegistrationSplashScreen"
+        android:name="myfitnesspass.basic.registration.RegistrationSplashScreen"
         android:label="registration_splash_screen"
         tools:layout="@layout/splash_screen" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/registration"
-        android:name="my.fitness.myfitness.ui.registration.Registration"
+        android:name="myfitnesspass.basic.registration.Registration"
         android:label="registration_registration"
         tools:layout="@layout/auth_login" >
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/personal"
-        android:name="my.fitness.myfitness.ui.registration.SignUp"
+        android:name="myfitnesspass.basic.registration.SignUp"
         android:label="registration_personal"
         tools:layout="@layout/auth_sign_up" >
         <action
@@ -47,32 +47,32 @@
     </fragment>
     <fragment
         android:id="@+id/personal2"
-        android:name="my.fitness.myfitness.ui.registration.Personal2"
+        android:name="myfitnesspass.basic.registration.Personal2"
         android:label="registration_personal2"
         tools:layout="@layout/registration_personal2" />
     <fragment
         android:id="@+id/body"
-        android:name="my.fitness.myfitness.ui.registration.Body"
+        android:name="myfitnesspass.basic.registration.Body"
         android:label="registration_body"
         tools:layout="@layout/profile_body" />
     <fragment
         android:id="@+id/membership"
-        android:name="my.fitness.myfitness.ui.registration.Membership"
+        android:name="myfitnesspass.basic.registration.Membership"
         android:label="registration_membership"
         tools:layout="@layout/profile_membership" />
     <fragment
         android:id="@+id/caoch"
-        android:name="my.fitness.myfitness.ui.registration.Caoch"
+        android:name="myfitnesspass.basic.registration.Caoch"
         android:label="registration_caoch"
         tools:layout="@layout/coach" />
     <fragment
         android:id="@+id/profilePhoto"
-        android:name="my.fitness.myfitness.ui.registration.ProfilePhoto"
+        android:name="myfitnesspass.basic.registration.ProfilePhoto"
         android:label="registration_profile_photo"
         tools:layout="@layout/profile_photo" />
     <fragment
         android:id="@+id/home"
-        android:name="my.fitness.myfitness.ui.home.Home"
+        android:name="myfitnesspass.basic.home.Home"
         android:label="main_app_home"
         tools:layout="@layout/home" />
 </navigation>
