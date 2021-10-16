@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.material.tabs.TabLayoutMediator
 import my.fitness.myfitness.R
+import my.fitness.myfitness.adapters.ViewPagerAdapter
 import my.fitness.myfitness.databinding.FragmentFitnessCoachViewBinding
 import my.fitness.myfitness.databinding.FragmentProgramViewBinding
 
@@ -21,13 +23,27 @@ class FitnessCoachView : Fragment() {
         _binding = FragmentFitnessCoachViewBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        //todo
-        /*
-        binding.addButton.setOnClickListener {
-            findNavController().navigate(R.id.action_program2_to_programCreation0)
-        }
+        val tabLayout = binding.tabsId
+        val viewPager = binding.viewPager2
+        val adapter = ViewPagerAdapter(childFragmentManager,lifecycle)
 
-         */
+        viewPager.adapter = adapter
+
+        //Fragment no longer exists for key FragmentStateAdapter with Viewpager2
+        viewPager.isSaveEnabled = false
+
+        TabLayoutMediator(tabLayout,viewPager){tab,position ->
+            when(position){
+                0->{
+                    tab.setIcon(R.drawable.ic_fitness)
+                }
+                1->{
+                    tab.setIcon(R.drawable.ic_coach)
+                }
+            }
+
+
+        }.attach()
 
         return view
     }

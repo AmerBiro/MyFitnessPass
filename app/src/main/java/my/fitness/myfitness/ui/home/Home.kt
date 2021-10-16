@@ -17,7 +17,7 @@ class Home : Fragment() {
     private val fitnesss = FitnessCoachView()
     private val graphs = GraphView()
     private val menuFragments = MenuView()
-    private val profiles = ProgramView()
+    private val profiles = ProfileView()
 
 
 
