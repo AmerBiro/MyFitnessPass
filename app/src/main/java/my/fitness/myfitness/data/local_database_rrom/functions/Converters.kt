@@ -12,8 +12,7 @@ class Converters {
     }
 
     @TypeConverter
-    fun toList(string: String): List<String>{
-       return Gson().fromJson(string, object : TypeToken<List<String>>() {}.type)
+    fun toList(string: String): List<String> {
+        return Gson().fromJson(string, object : TypeToken<List<String>>() {}.type)
     }
-
 }
