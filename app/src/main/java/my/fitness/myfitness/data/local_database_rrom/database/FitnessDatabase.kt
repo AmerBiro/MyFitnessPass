@@ -3,6 +3,7 @@ package my.fitness.myfitness.data.local_database_rrom.database
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
+import my.fitness.myfitness.data.local_database_rrom.dao.FitnessDao
 import my.fitness.myfitness.data.local_database_rrom.entities.Fitness
 import my.fitness.myfitness.data.local_database_rrom.functions.Converters
 
@@ -13,5 +14,5 @@ import my.fitness.myfitness.data.local_database_rrom.functions.Converters
 
 @TypeConverters(Converters::class)
 abstract class FitnessDatabase : RoomDatabase() {
-//    abstract fun fitnessDao(): FitnessDao
+    abstract fun fitnessDao(): FitnessDao
 }

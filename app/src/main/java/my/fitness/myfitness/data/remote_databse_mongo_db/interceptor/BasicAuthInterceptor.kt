@@ -1,6 +1,6 @@
 package my.fitness.myfitness.data.remote_databse_mongo_db.interceptor
 
-import my.fitness.myfitness.data.remote_databse_mongo_db.interceptor.Constants.IGNORE_AUTH_URLS
+import my.fitness.myfitness.data.others.Constants.IGNORE_AUTH_URLS
 import okhttp3.Credentials
 import okhttp3.Interceptor
 import okhttp3.Response

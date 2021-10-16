@@ -16,5 +16,5 @@ import my.fitness.myfitness.data.local_database_rrom.functions.Converters
 @TypeConverters(Converters::class)
 abstract class ProgramDatabase : RoomDatabase() {
 
-//    abstract fun programDao(): ProgramDao
+    abstract fun programDao(): ProgramDao
 }
