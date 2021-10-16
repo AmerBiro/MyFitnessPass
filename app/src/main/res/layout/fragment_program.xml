@@ -50,7 +50,7 @@
                 android:background="@drawable/ic_favorite" />
 
             <Button
-                android:id="@+id/add_id"
+                android:id="@+id/add_button"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_margin="5dp"
@@ -66,7 +66,7 @@
     <View
         android:id="@+id/div_id"
         style="@style/Divider2"
-        android:layout_below="@+id/linear_id"/>
+        android:layout_below="@+id/linear_id" />
 
     <SearchView
         android:queryHint="Enter Program name"

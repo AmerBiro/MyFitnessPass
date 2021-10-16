@@ -95,5 +95,41 @@
         android:id="@+id/home2"
         android:name="my.fitness.myfitness.main_app.Home"
         android:label="main_app_home"
-        tools:layout="@layout/main_app_home" />
+        tools:layout="@layout/main_app_home" >
+        <action
+            android:id="@+id/action_home2_to_program2"
+            app:destination="@id/program2" />
+    </fragment>
+    <fragment
+        android:id="@+id/program2"
+        android:name="my.fitness.myfitness.main_app.viewPager.Program"
+        android:label="fragment_program"
+        tools:layout="@layout/fragment_program" >
+        <action
+            android:id="@+id/action_program2_to_programCreation0"
+            app:destination="@id/programCreation0" />
+    </fragment>
+    <fragment
+        android:id="@+id/programCreation0"
+        android:name="my.fitness.myfitness.program_creation.ProgramCreation0"
+        android:label="fragment_program_creation_0"
+        tools:layout="@layout/fragment_program_creation_0" >
+        <action
+            android:id="@+id/action_programCreation0_to_programCreation1"
+            app:destination="@id/programCreation1" />
+    </fragment>
+    <fragment
+        android:id="@+id/programCreation1"
+        android:name="my.fitness.myfitness.program_creation.ProgramCreation1"
+        android:label="fragment_program_creation1"
+        tools:layout="@layout/fragment_program_creation1" >
+        <action
+            android:id="@+id/action_programCreation1_to_programCreation2"
+            app:destination="@id/programCreation2" />
+    </fragment>
+    <fragment
+        android:id="@+id/programCreation2"
+        android:name="my.fitness.myfitness.program_creation.ProgramCreation2"
+        android:label="fragment_program_creation2"
+        tools:layout="@layout/fragment_program_creation2" />
 </navigation>

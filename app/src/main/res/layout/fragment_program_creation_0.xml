@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/linear_layout_main_page"
+    android:orientation="vertical"
+    tools:context=".program_creation.ProgramCreation0">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/page_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Create a program" />
+
+        <Button
+            android:id="@+id/button_next_arrow"
+            android:layout_width="65dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_next"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/div_id"
+        style="@style/Divider"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/linear_id" />
+</LinearLayout>
