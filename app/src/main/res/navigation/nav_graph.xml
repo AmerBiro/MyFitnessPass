@@ -74,5 +74,5 @@
         android:id="@+id/home"
         android:name="my.fitness.myfitness.ui.home.Home"
         android:label="main_app_home"
-        tools:layout="@layout/programs" />
+        tools:layout="@layout/home" />
 </navigation>
