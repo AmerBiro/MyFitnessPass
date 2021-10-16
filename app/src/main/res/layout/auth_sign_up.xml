@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/linear_layout_main_page"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".ui.registration.SignUp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/button_back_arrow"
@@ -19,62 +20,36 @@
             android:layout_alignParentLeft="true"
             android:background="@drawable/ic_back" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="1/6"
-            style="@style/page_counter"
-            />
-
-        <Button
-            android:id="@+id/button_next_arrow"
-            android:layout_width="65dp"
-            android:layout_height="25dp"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/ic_next" />
     </RelativeLayout>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Let’s have an account and start training. It takes just 2 minuttes"
-        style="@style/page_description"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Personal"
-        style="@style/page_title"
-        />
-
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        >
+        android:layout_margin="16dp"
+        android:layout_marginTop="30dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:hint="First name"
-                app:endIconMode="clear_text"
-                android:layout_alignParentLeft="true"
-                >
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
                     android:inputType="textPersonName" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -82,22 +57,22 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:hint="Last name"
-                app:endIconMode="clear_text"
-                android:layout_alignParentRight="true"
-                >
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
                     android:inputType="textPersonName" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-
-        </RelativeLayout>
+        </LinearLayout>
 
 
 
@@ -149,5 +124,24 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/button_signup"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="right"
+        android:background="@drawable/ic_login"
+        android:text="Sign up"
+        android:textAllCaps="false" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/fitness_loading_spinner"
+        />
 
 </LinearLayout>
