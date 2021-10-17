@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="17 Dec 1984"
+            android:text="17 Oct 2021"
             android:textSize="18dp" />
 
 

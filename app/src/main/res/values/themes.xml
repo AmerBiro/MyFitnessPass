@@ -15,6 +15,11 @@
         <!-- Change status bar text color with WHITE/BLACK -->
         <item name="android:windowLightStatusBar">true</item>
 
+        <!-- MaterialDatePicker -->
+        <item name="materialCalendarStyle">@style/Widget.MaterialComponents.MaterialCalendar</item>
+        <item name="materialCalendarFullscreenTheme">@style/ThemeOverlay.MaterialComponents.MaterialCalendar.Fullscreen</item>
+        <item name="materialCalendarTheme">@style/ThemeOverlay.MaterialComponents.MaterialCalendar</item>
+
     </style>
 
     <style name="page_title">
