@@ -62,7 +62,7 @@
 
     <View
         android:id="@+id/div_id"
-        style="@style/Divider2"
+        style="@style/DividerII"
         android:layout_below="@+id/linear_id" />
 
     <SearchView

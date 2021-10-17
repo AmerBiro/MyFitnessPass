@@ -39,6 +39,11 @@
         <item name="android:textSize">22sp</item>
     </style>
 
+    <style name="page_counterII">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
 
     <style name="page_description">
         <item name="android:layout_marginTop">24dp</item>
@@ -64,19 +69,29 @@
 
     </style>
 
-    <style name="Divider">
+    <style name="DividerI">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
         <item name="android:background">?android:attr/listDivider</item>
     </style>
 
 
-    <style name="Divider2">
+    <style name="DividerII">
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
         <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+
+    <style name="DividerIII">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
     </style>
 
 

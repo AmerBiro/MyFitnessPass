@@ -23,7 +23,6 @@ class ProgramView : Fragment() {
         _binding = FragmentProgramViewBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        //todo
 
         binding.addButton.setOnClickListener {
             findNavController().navigate(R.id.action_home_to_programCreationI)

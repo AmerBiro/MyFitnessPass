@@ -15,7 +15,7 @@
         android:layout_weight="1" />
 
 
-    <View style="@style/Divider"/>
+    <View style="@style/DividerI"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

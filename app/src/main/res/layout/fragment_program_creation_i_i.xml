@@ -1,13 +1,57 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/linear_layout_main_page"
+    android:orientation="vertical"
     tools:context="myfitnesspass.basic.home.programs.program_creation.ProgramCreationII">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/page_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create a Program" />
+
+        <Button
+            android:id="@+id/button_next_arrow"
+            android:layout_width="65dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_next" />
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="5dp"
+        android:id="@+id/div_id"
+        style="@style/DividerI"
+        android:layout_below="@+id/linear_id" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="15dp"
+        android:orientation="horizontal">
+        <View
+            style="@style/DividerIII"
+            android:layout_weight="1"
+            android:layout_below="@+id/linear_id" />
+        <View
+            android:background="@color/black"
+            style="@style/DividerIII"
+            android:layout_weight="1"
+            android:layout_below="@+id/linear_id" />
+
+        <View
+            style="@style/DividerIII"
+            android:layout_weight="1"
+            android:layout_below="@+id/linear_id" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,13 +1,59 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/linear_layout_main_page"
+    android:orientation="vertical"
     tools:context="myfitnesspass.basic.home.programs.program_creation.ProgramCreationIII">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <TextView
+            style="@style/page_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create a Program" />
+
+        <TextView
+            style="@style/page_counterII"
+            android:id="@+id/done_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Done" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="5dp"
+        android:id="@+id/div_id"
+        style="@style/DividerI"
+        android:layout_below="@+id/linear_id" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="15dp"
+        android:orientation="horizontal">
+        <View
+            style="@style/DividerIII"
+            android:layout_weight="1"
+
+            android:layout_below="@+id/linear_id" />
+        <View
+            style="@style/DividerIII"
+            android:layout_weight="1"
+            android:layout_below="@+id/linear_id" />
+
+        <View
+            style="@style/DividerIII"
+            android:background="@color/black"
+            android:layout_weight="1"
+            android:layout_below="@+id/linear_id" />
+    </LinearLayout>
+
+</LinearLayout>
