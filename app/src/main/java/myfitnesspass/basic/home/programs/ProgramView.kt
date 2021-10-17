@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import myfitnesspass.fitness.myfitness.R
 import myfitnesspass.fitness.myfitness.databinding.FragmentProgramViewBinding
 
 
@@ -22,12 +24,13 @@ class ProgramView : Fragment() {
         val view = binding.root
 
         //todo
-        /*
+
         binding.addButton.setOnClickListener {
-            findNavController().navigate(R.id.action_program2_to_programCreation0)
+            findNavController().navigate(R.id.action_home_to_programCreationI)
+
         }
 
-         */
+
 
         return view
     }

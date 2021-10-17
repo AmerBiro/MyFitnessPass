@@ -11,26 +11,7 @@
         android:label="registration_splash_screen"
         tools:layout="@layout/splash_screen" >
         <action
-            android:id="@+id/action_registrationSplashScreen_to_registration"
-            app:destination="@id/registration"
-            app:popUpToInclusive="true"
-            app:popUpTo="@id/registrationSplashScreen"
-            />
-        <action
             android:id="@+id/action_registrationSplashScreen_to_home"
-            app:destination="@id/home" />
-    </fragment>
-    <fragment
-        android:id="@+id/registration"
-        android:name="myfitnesspass.basic.registration.Registration"
-        android:label="registration_registration"
-        tools:layout="@layout/auth_login" >
-        <action
-            android:id="@+id/action_registration_to_personal"
-            app:destination="@id/personal"
-            />
-        <action
-            android:id="@+id/action_registration_to_home"
             app:destination="@id/home" />
     </fragment>
     <fragment
@@ -38,9 +19,6 @@
         android:name="myfitnesspass.basic.registration.SignUp"
         android:label="registration_personal"
         tools:layout="@layout/auth_sign_up" >
-        <action
-            android:id="@+id/action_personal_to_registration"
-            app:destination="@id/registration" />
         <action
             android:id="@+id/action_personal_to_home"
             app:destination="@id/home" />
@@ -74,5 +52,37 @@
         android:id="@+id/home"
         android:name="myfitnesspass.basic.home.Home"
         android:label="main_app_home"
-        tools:layout="@layout/home" />
+        tools:layout="@layout/home" >
+        <action
+            android:id="@+id/action_home_to_programCreationI"
+            app:destination="@id/programCreationI" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="myfitnesspass.ui.auth.login.fragments.LoginFragment"
+        android:label="auth_login"
+        tools:layout="@layout/auth_login" />
+    <fragment
+        android:id="@+id/programCreationI"
+        android:name="myfitnesspass.basic.home.programs.program_creation.ProgramCreationI"
+        android:label="fragment_program_creation_i"
+        tools:layout="@layout/fragment_program_creation_i" >
+        <action
+            android:id="@+id/action_programCreationI_to_programCreationII"
+            app:destination="@id/programCreationII" />
+    </fragment>
+    <fragment
+        android:id="@+id/programCreationII"
+        android:name="myfitnesspass.basic.home.programs.program_creation.ProgramCreationII"
+        android:label="fragment_program_creation_i_i"
+        tools:layout="@layout/fragment_program_creation_i_i" >
+        <action
+            android:id="@+id/action_programCreationII_to_programCreationIII"
+            app:destination="@id/programCreationIII" />
+    </fragment>
+    <fragment
+        android:id="@+id/programCreationIII"
+        android:name="myfitnesspass.basic.home.programs.program_creation.ProgramCreationIII"
+        android:label="fragment_program_creation_i_i_i"
+        tools:layout="@layout/fragment_program_creation_i_i_i" />
 </navigation>

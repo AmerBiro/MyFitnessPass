@@ -29,7 +29,7 @@ class Home : Fragment() {
 
         val view =  inflater.inflate(R.layout.home, container, false)
 
-        replaceFragment(programs)
+        //replaceFragment(programs)
 
         val bottom = view.findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
@@ -48,21 +48,12 @@ class Home : Fragment() {
         bottom.selectedItemId =  R.id.program
 
 
-
-
-        /*
-        BottomNavigationView bottomNavigationView;
-        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setOnNavigationItemSelectedListener(myNavigationItemListener);
-        bottomNavigationView.setSelectedItemId(R.id.my_menu_item_id);
-        * */
-
         return view
     }
 
     private fun replaceFragment(fragment: Fragment){
         if (fragment != null){
-            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            val transaction = childFragmentManager.beginTransaction()
             transaction.replace(R.id.viewPager,fragment)
             transaction.commit()
         }
