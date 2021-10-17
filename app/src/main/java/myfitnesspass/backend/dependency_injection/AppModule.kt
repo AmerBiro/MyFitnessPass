@@ -11,9 +11,9 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import myfitnesspass.backend.data.local.database.ProgramDatabase
-import myfitnesspass.backend.Constants.BASE_URL
-import myfitnesspass.backend.Constants.DATABASE_NAME
-import myfitnesspass.backend.Constants.ENCRYPTED_SHARED_PREF_NAME
+import myfitnesspass.backend.others.Constants.BASE_URL
+import myfitnesspass.backend.others.Constants.DATABASE_NAME
+import myfitnesspass.backend.others.Constants.ENCRYPTED_SHARED_PREF_NAME
 import myfitnesspass.backend.data.remote.api.ProgramAPI
 import myfitnesspass.backend.data.remote.functions.BasicAuthInterceptor
 import okhttp3.OkHttpClient

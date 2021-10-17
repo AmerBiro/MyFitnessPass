@@ -1,4 +1,4 @@
-package myfitnesspass.backend
+package myfitnesspass.backend.others
 
 object Constants {
 

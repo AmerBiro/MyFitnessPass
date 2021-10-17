@@ -1,6 +1,6 @@
 package myfitnesspass.backend.data.remote.functions
 
-import myfitnesspass.backend.Constants.IGNORE_AUTH_URLS
+import myfitnesspass.backend.others.Constants.IGNORE_AUTH_URLS
 import okhttp3.Credentials
 import okhttp3.Interceptor
 import okhttp3.Response
