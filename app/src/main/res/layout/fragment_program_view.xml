@@ -66,6 +66,7 @@
         android:layout_below="@+id/linear_id" />
 
     <SearchView
+        android:id="@+id/search_bar"
         android:queryHint="Enter Program name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -74,4 +75,14 @@
         android:background="@drawable/search_view_background"
         android:layout_below="@+id/div_id"
         android:layout_margin="16dp" />
+
+    <include
+        layout="@layout/program_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_bar"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp" />
 </RelativeLayout>

@@ -27,8 +27,7 @@
             android:layout_height="25dp"
             android:layout_alignParentRight="true"
             android:background="@drawable/ic_next"
-            tools:ignore="SpeakableTextPresentCheck"
-            />
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </RelativeLayout>
 

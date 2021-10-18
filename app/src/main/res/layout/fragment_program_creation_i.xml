@@ -119,11 +119,35 @@
         style="@style/DividerI"
         android:layout_below="@+id/linear_id" />
 
-    <TextView
-        android:id="@+id/view_date"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="TextView" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_one"
+                android:text="Rang"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_two"
+                android:text="one date"
+                />
+
+
+        </RadioGroup>
+
+    </RelativeLayout>
 
 
 </LinearLayout>
