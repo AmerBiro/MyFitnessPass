@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     style="@style/linear_layout_main_page"
     android:orientation="vertical"
-    tools:context="myfitnesspass.basic.home.programs.program_creation.ProgramCreationII">
+    tools:context="myfitnesspass.ui.home.programs.fragments.ProgramCreationII">
 
 
     <RelativeLayout

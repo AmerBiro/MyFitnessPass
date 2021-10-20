@@ -1,4 +1,4 @@
-package myfitnesspass.ui.home.graph.fragments
+package myfitnesspass.ui.home.coach_fitness.fitness.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,13 +7,16 @@ import android.view.ViewGroup
 import myfitnesspass.fitness.myfitness.R
 import myfitnesspass.ui.BaseFragment
 
-class GraphFragment: BaseFragment(R.layout.fragment_graph_view) {
+class ShowFitnessFragment: BaseFragment(R.layout.fragment_fitness_show) {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_graph_view, container, false)
+        return inflater.inflate(R.layout.fragment_fitness_show, container, false)
     }
+
+
 }
+

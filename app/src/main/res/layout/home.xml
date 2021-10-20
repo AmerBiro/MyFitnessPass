@@ -6,7 +6,7 @@
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    tools:context="myfitnesspass.basic.home.Home">
+    tools:context="myfitnesspass.ui.home.homeview.fragments.HomeView">
 
     <FrameLayout
         android:id="@+id/viewPager"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="myfitnesspass.basic.home.programs.FitnessView">
+    tools:context="myfitnesspass.ui.home.coach_fitness.viewpager.fragments.ViewFitnessCoach">
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"

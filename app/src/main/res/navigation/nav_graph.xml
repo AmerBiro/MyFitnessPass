@@ -6,42 +6,34 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/splashScreenFragment">
     <fragment
-        android:id="@+id/personal2"
-        android:name="myfitnesspass.basic.registration.Personal2"
-        android:label="registration_personal2"
-        tools:layout="@layout/registration_personal2" />
-    <fragment
-        android:id="@+id/body"
-        android:name="myfitnesspass.basic.registration.Body"
-        android:label="registration_body"
-        tools:layout="@layout/profile_body" />
-    <fragment
-        android:id="@+id/membership"
-        android:name="myfitnesspass.basic.registration.Membership"
-        android:label="registration_membership"
-        tools:layout="@layout/profile_membership" />
-    <fragment
-        android:id="@+id/profilePhoto"
-        android:name="myfitnesspass.basic.registration.ProfilePhoto"
-        android:label="registration_profile_photo"
-        tools:layout="@layout/profile_photo" />
-    <fragment
-        android:id="@+id/home"
-        android:name="myfitnesspass.basic.home.Home"
-        android:label="main_app_home"
-        tools:layout="@layout/home" >
-        <action
-            android:id="@+id/action_home_to_programCreationI"
-            app:destination="@id/programCreationI" />
-    </fragment>
-    <fragment
         android:id="@+id/loginFragment"
         android:name="myfitnesspass.ui.auth.login.fragments.LoginFragment"
         android:label="auth_login"
         tools:layout="@layout/auth_login" />
     <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="myfitnesspass.ui.splash_screen.fragments.SplashScreenFragment"
+        android:label="splash_screen"
+        tools:layout="@layout/splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeView"
+            app:destination="@id/homeView" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeView"
+        android:name="myfitnesspass.ui.home.homeview.fragments.HomeView"
+        android:label="home"
+        tools:layout="@layout/home" >
+        <action
+            android:id="@+id/action_homeView_to_programCreationI"
+            app:destination="@id/programCreationI" />
+    </fragment>
+    <fragment
         android:id="@+id/programCreationI"
-        android:name="myfitnesspass.basic.home.programs.program_creation.ProgramCreationI"
+        android:name="myfitnesspass.ui.home.programs.fragments.ProgramCreationI"
         android:label="fragment_program_creation_i"
         tools:layout="@layout/fragment_program_creation_i" >
         <action
@@ -50,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/programCreationII"
-        android:name="myfitnesspass.basic.home.programs.program_creation.ProgramCreationII"
+        android:name="myfitnesspass.ui.home.programs.fragments.ProgramCreationII"
         android:label="fragment_program_creation_i_i"
         tools:layout="@layout/fragment_program_creation_i_i" >
         <action
@@ -59,20 +51,11 @@
     </fragment>
     <fragment
         android:id="@+id/programCreationIII"
-        android:name="myfitnesspass.basic.home.programs.program_creation.ProgramCreationIII"
+        android:name="myfitnesspass.ui.home.programs.fragments.ProgramCreationIII"
         android:label="fragment_program_creation_i_i_i"
         tools:layout="@layout/fragment_program_creation_i_i_i" >
         <action
-            android:id="@+id/action_programCreationIII_to_home"
-            app:destination="@id/home" />
-    </fragment>
-    <fragment
-        android:id="@+id/splashScreenFragment"
-        android:name="myfitnesspass.ui.splash_screen.fragments.SplashScreenFragment"
-        android:label="splash_screen"
-        tools:layout="@layout/splash_screen" >
-        <action
-            android:id="@+id/action_splashScreenFragment_to_home"
-            app:destination="@id/home" />
+            android:id="@+id/action_programCreationIII_to_homeView"
+            app:destination="@id/homeView" />
     </fragment>
 </navigation>

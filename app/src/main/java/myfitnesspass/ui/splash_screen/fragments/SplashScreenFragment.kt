@@ -15,7 +15,7 @@ class SplashScreenFragment : BaseFragment(R.layout.splash_screen) {
 
     private var _binding: SplashScreenBinding? = null
     private val binding get() = _binding!!
-    private var duration : Int = 3000
+    private var duration : Int = 1500
     private var handler = Handler()
 
     override fun onCreateView(
@@ -32,7 +32,9 @@ class SplashScreenFragment : BaseFragment(R.layout.splash_screen) {
 
     fun autoSignIn() {
             var delay = Runnable {
-                findNavController().navigate(R.id.action_splashScreenFragment_to_home)
+                //action_splashScreenFragment_to_homeView
+                //action_splashScreenFragment_to_loginFragment
+                findNavController().navigate(R.id.action_splashScreenFragment_to_homeView)
             }
             handler.postDelayed(delay, duration.toLong())
 
