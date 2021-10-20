@@ -82,8 +82,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:background="@drawable/ic_login"
-            android:textAllCaps="false"
-            android:text="Login" />
+            android:text="Login"
+            android:textAllCaps="false" />
 
     </RelativeLayout>
 

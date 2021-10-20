@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context="myfitnesspass.basic.registration.SignUp">
+    tools:context="myfitnesspass.ui.auth.sign_up.fragments.SignUpFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
