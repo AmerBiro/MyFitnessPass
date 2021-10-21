@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/splashScreenFragment">
+    app:startDestination="@id/signUpFragment">
     <fragment
         android:id="@+id/loginFragment"
         android:name="myfitnesspass.ui.auth.login.fragments.LoginFragment"
@@ -58,4 +58,9 @@
             android:id="@+id/action_programCreationIII_to_homeView"
             app:destination="@id/homeView" />
     </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="myfitnesspass.ui.auth.sign_up.fragments.SignUpFragment"
+        android:label="auth_sign_up"
+        tools:layout="@layout/auth_sign_up" />
 </navigation>
