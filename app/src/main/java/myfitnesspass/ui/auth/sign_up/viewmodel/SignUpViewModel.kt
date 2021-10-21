@@ -33,4 +33,5 @@ class SignUpViewModel @Inject constructor(
             _registerStatus.postValue(result)
         }
     }
+
 }

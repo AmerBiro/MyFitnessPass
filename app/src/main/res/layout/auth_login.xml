@@ -30,7 +30,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/username"
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
@@ -118,6 +118,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/ic_resource_break"
         android:layout_marginTop="50dp"
+        android:visibility="gone"
         />
 
 
@@ -130,6 +131,7 @@
         android:layout_marginTop="50dp"
         android:layout_gravity="center"
         android:gravity="center"
+        android:visibility="gone"
         >
 
         <Button
@@ -149,6 +151,15 @@
             android:text="sign in with facebook"
             />
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:visibility="gone"
+        />
 
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package my.myfitness.myfitnesspass.data.remote.requests.user
+package myfitnesspass.data.remote.requests.user
 
 data class UserRequest(
     val email: String,

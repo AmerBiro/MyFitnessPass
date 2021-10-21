@@ -7,7 +7,7 @@ import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKey
 import myfitnesspass.data.local.database.ProgramDatabase
 import my.myfitness.myfitnesspass.data.remote.others.BasicAuthInterceptor
-import my.myfitness.myfitnesspass.data.remote.api.UserApi
+import myfitnesspass.data.remote.api.UserApi
 import myfitnesspass.other.Constants.BASE_URL
 import myfitnesspass.other.Constants.DATABASE_NAME
 import myfitnesspass.other.Constants.ENCRYPTED_SHARED_PREF_NAME
@@ -38,6 +38,8 @@ object AppModule {
     @Singleton
     @Provides
     fun provideBasicAuthInterceptor() = BasicAuthInterceptor()
+
+
 
     @Singleton
     @Provides

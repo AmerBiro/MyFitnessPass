@@ -1,7 +1,7 @@
-package my.myfitness.myfitnesspass.data.remote.api
+package myfitnesspass.data.remote.api
 
-import my.myfitness.myfitnesspass.data.remote.requests.user.UserRequest
-import my.myfitness.myfitnesspass.data.remote.responses.SimpleResponse
+import myfitnesspass.data.remote.requests.user.UserRequest
+import myfitnesspass.data.remote.responses.SimpleResponse
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -36,19 +36,3 @@ interface UserApi {
 //    @GET("/getNotes")
 //    suspend fun getNotes(): Response<List<Program>>
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,7 +1,9 @@
 package myfitnesspass.ui.auth.sign_up.fragments
 
+import android.content.ContentValues.TAG
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -56,14 +58,17 @@ class SignUpFragment : BaseFragment(R.layout.auth_sign_up) {
             result?.let {
                 when(result.status) {
                     Status.SUCCESS -> {
+                        Log.d(TAG, "subscribeToObservers: SUCCESS...")
                         binding.progressBar.visibility = View.GONE
                         showSnackBar(view2, result.data ?: "Successfully registered an account")
                     }
                     Status.ERROR -> {
+                        Log.d(TAG, "subscribeToObservers: ERROR...")
                         binding.progressBar.visibility = View.GONE
                         showSnackBar(view2, result.message ?: "An unknown error occurred")
                     }
                     Status.LOADING -> {
+                        Log.d(TAG, "subscribeToObservers: LOADING...")
                         binding.progressBar.visibility = View.VISIBLE
                     }
                 }

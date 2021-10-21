@@ -25,16 +25,14 @@ class SplashScreenFragment : BaseFragment(R.layout.splash_screen) {
     ): View? {
         _binding = SplashScreenBinding.inflate(inflater, container, false)
         val view = binding.root
-        autoSignIn()
+        accountChecker()
         return view
     }
 
 
-    fun autoSignIn() {
+    private fun accountChecker() {
             var delay = Runnable {
-                //action_splashScreenFragment_to_homeView
-                //action_splashScreenFragment_to_loginFragment
-                findNavController().navigate(R.id.action_splashScreenFragment_to_homeView)
+                findNavController().navigate(R.id.action_splashScreenFragment_to_loginFragment)
             }
             handler.postDelayed(delay, duration.toLong())
 

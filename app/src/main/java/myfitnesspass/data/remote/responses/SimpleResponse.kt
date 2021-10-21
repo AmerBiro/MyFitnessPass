@@ -1,4 +1,4 @@
-package my.myfitness.myfitnesspass.data.remote.responses
+package myfitnesspass.data.remote.responses
 
 data class SimpleResponse(
     val successful: Boolean,
