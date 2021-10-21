@@ -25,4 +25,5 @@ data class Program(
     val isSynced: Boolean = false,
     @PrimaryKey(autoGenerate = false)
     val id: String = UUID.randomUUID().toString()
+
 )
