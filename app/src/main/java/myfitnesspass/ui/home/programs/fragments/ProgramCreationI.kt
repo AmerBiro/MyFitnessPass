@@ -33,7 +33,7 @@ class ProgramCreationI : BaseFragment(R.layout.fragment_program_creation_i) {
 
         }
 
-
+/*
         val myCalendar = Calendar.getInstance()
         val datePicker = DatePickerDialog.OnDateSetListener { datePicker, i, i2, i3 ->
             myCalendar.set(Calendar.YEAR,i)
@@ -70,10 +70,13 @@ class ProgramCreationI : BaseFragment(R.layout.fragment_program_creation_i) {
 
       */
 
+ */
+
 
         return view
     }
 
+    /*
     private fun updateLabel(myCalendar: Calendar) {
         val myFormat  ="dd-MM-yyyy"
         val sdf  =SimpleDateFormat(myFormat,Locale.getDefault())
@@ -114,5 +117,7 @@ class ProgramCreationI : BaseFragment(R.layout.fragment_program_creation_i) {
         return format.format(date)
 
     }
+
+     */
 
 }

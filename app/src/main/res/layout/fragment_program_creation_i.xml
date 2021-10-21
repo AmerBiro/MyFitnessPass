@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
         android:layout_marginHorizontal="15dp"
         android:orientation="horizontal">
         <View
@@ -53,101 +53,58 @@
             style="@style/DividerIII"
             android:layout_weight="1"
             android:layout_below="@+id/linear_id" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:orientation="horizontal">
-        <TextView
-            style="@style/page_counterII"
-
-            android:layout_width="0dp"
+        <View
+            style="@style/DividerIII"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Program Name " />
-
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="0dp"
-                android:paddingStart="10dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:hint="Fat Burning"
-                android:background="@android:color/transparent"
-                android:inputType="textPersonName" />
-
-
-
-
+            android:layout_below="@+id/linear_id" />
+        <View
+            style="@style/DividerIII"
+            android:layout_weight="1"
+            android:layout_below="@+id/linear_id" />
     </LinearLayout>
 
-    <View
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        style="@style/page_counterII"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose your goal " />
+
+    <RadioGroup
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
-        style="@style/DividerI"
-        android:layout_below="@+id/linear_id" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:orientation="horizontal">
-        <TextView
-            style="@style/page_counterII"
-            android:paddingTop="12dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Select Period " />
-
-        <Button
-            android:id="@+id/select_date"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="Select Period"
-            android:gravity="left"
-            android:paddingStart="10dp"
-            android:background="@android:color/transparent"
-            android:textAllCaps="false"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-    <View
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
-        style="@style/DividerI"
-        android:layout_below="@+id/linear_id" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center">
-
-        <RadioGroup
-            android:id="@+id/radio_group"
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
             android:layout_width="wrap_content"
-            android:visibility="gone"
-            android:layout_height="wrap_content">
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radio_one"
-                android:text="Rang"
-                />
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_one"
+            android:text="Lose weight"
+            />
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radio_two"
-                android:text="one date"
-                />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_two"
+            android:text="Be stronger"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_three"
+            android:text="Bigger muscles"
+            />
 
 
-        </RadioGroup>
+    </RadioGroup>
 
-    </RelativeLayout>
+
+
+
 
 
 </LinearLayout>

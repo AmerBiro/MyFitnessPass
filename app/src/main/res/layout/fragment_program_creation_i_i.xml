@@ -31,11 +31,11 @@
         style="@style/DividerI"
         android:layout_below="@+id/linear_id" />
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="0"
+        android:layout_marginTop="30dp"
         android:layout_marginHorizontal="15dp"
         android:orientation="horizontal">
         <View
@@ -43,7 +43,12 @@
             android:layout_weight="1"
             android:layout_below="@+id/linear_id" />
         <View
+            style="@style/DividerIII"
+            android:layout_weight="1"
             android:background="@color/black"
+            android:layout_below="@+id/linear_id" />
+
+        <View
             style="@style/DividerIII"
             android:layout_weight="1"
             android:layout_below="@+id/linear_id" />
@@ -52,6 +57,43 @@
             style="@style/DividerIII"
             android:layout_weight="1"
             android:layout_below="@+id/linear_id" />
+        <View
+            style="@style/DividerIII"
+            android:layout_weight="1"
+            android:layout_below="@+id/linear_id" />
     </LinearLayout>
+
+
+        <TextView
+            style="@style/page_counterII"
+            android:paddingTop="12dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="When do you want to start?" />
+
+    <TextView
+        style="@style/page_counterII"
+        android:id="@+id/show_date"
+        android:paddingTop="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+
+
+
+    <CalendarView
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/calendar_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+
+
 
 </LinearLayout>
