@@ -24,7 +24,7 @@ class ProgramCreationIII : BaseFragment(R.layout.fragment_program_creation_i_i_i
         val view = binding.root
 
 
-        binding.doneButton.setOnClickListener {
+        binding.buttonNextArrow.setOnClickListener {
             findNavController().navigate(R.id.action_programCreationIII_to_homeView)
 
         }
