@@ -42,6 +42,10 @@
         <action
             android:id="@+id/action_homeView_to_programCreationI"
             app:destination="@id/programCreationI" />
+        <action
+            android:id="@+id/action_homeView_to_loginFragment"
+            app:destination="@id/loginFragment"
+            />
     </fragment>
 
 
