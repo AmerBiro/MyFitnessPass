@@ -18,6 +18,8 @@ import myfitnesspass.fitness.myfitness.R
 import myfitnesspass.fitness.myfitness.databinding.AuthLoginBinding
 import myfitnesspass.other.Constants.KEY_LOGGED_IN_EMAIL
 import myfitnesspass.other.Constants.KEY_LOGGED_IN_PASSWORD
+import myfitnesspass.other.Constants.NO_KEY_LOGGED_IN_EMAIL
+import myfitnesspass.other.Constants.NO_KEY_LOGGED_IN_PASSWORD
 import myfitnesspass.other.Status
 import myfitnesspass.ui.BaseFragment
 import myfitnesspass.ui.auth.login.viewmodel.LoginViewModel
@@ -56,7 +58,13 @@ class LoginFragment : BaseFragment(R.layout.auth_login) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        if (isLoggedIn()){
+            authenticateApi(curEmail ?: "", curPassword ?: "")
+            redirectLogin()
+        }
+
         view2 = view
+
         requireActivity().requestedOrientation = SCREEN_ORIENTATION_PORTRAIT
         subscribeToObservers()
 
@@ -76,6 +84,12 @@ class LoginFragment : BaseFragment(R.layout.auth_login) {
         basicAuthInterceptor.password = password
     }
 
+    private fun isLoggedIn(): Boolean{
+        curEmail = sharedPref.getString(KEY_LOGGED_IN_EMAIL, NO_KEY_LOGGED_IN_EMAIL) ?: NO_KEY_LOGGED_IN_EMAIL
+        curPassword = sharedPref.getString(KEY_LOGGED_IN_PASSWORD, NO_KEY_LOGGED_IN_PASSWORD) ?: NO_KEY_LOGGED_IN_PASSWORD
+        return curEmail != NO_KEY_LOGGED_IN_EMAIL && curPassword != NO_KEY_LOGGED_IN_PASSWORD
+    }
+
     private fun redirectLogin() {
         findNavController().navigate(R.id.action_loginFragment_to_homeView)
     }
@@ -90,7 +104,8 @@ class LoginFragment : BaseFragment(R.layout.auth_login) {
                         sharedPref.edit().putString(KEY_LOGGED_IN_EMAIL, curEmail).apply()
                         sharedPref.edit().putString(KEY_LOGGED_IN_PASSWORD, curPassword).apply()
                         authenticateApi(curEmail ?: "", curPassword ?: "")
-                        findNavController().navigate(R.id.action_loginFragment_to_homeView)
+//                        findNavController().navigate(R.id.action_loginFragment_to_homeView)
+                        redirectLogin()
                     }
                     Status.ERROR -> {
                         binding.progressBar.visibility = View.GONE
