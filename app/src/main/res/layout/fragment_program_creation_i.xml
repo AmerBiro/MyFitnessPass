@@ -70,37 +70,54 @@
         style="@style/page_counterII"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose your goal " />
+        android:text="What is your program called? " />
 
-    <RadioGroup
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        android:id="@+id/radio_group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <RadioButton
-            android:layout_width="wrap_content"
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_margin="30dp"
+        android:layout_height="wrap_content"
+        android:hint="Program Name"
+        app:endIconMode="clear_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/radio_one"
-            android:text="Lose weight"
-            />
+            android:gravity="center"
+            android:inputType="text" />
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radio_two"
-            android:text="Be stronger"
-            />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radio_three"
-            android:text="Bigger muscles"
-            />
+<!--    <RadioGroup-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:id="@+id/radio_group"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <RadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/radio_one"-->
+<!--            android:text="Lose weight"-->
+<!--            />-->
+
+<!--        <RadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/radio_two"-->
+<!--            android:text="Be stronger"-->
+<!--            />-->
+
+<!--        <RadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/radio_three"-->
+<!--            android:text="Bigger muscles"-->
+<!--            />-->
 
 
-    </RadioGroup>
+<!--    </RadioGroup>-->
 
 
 

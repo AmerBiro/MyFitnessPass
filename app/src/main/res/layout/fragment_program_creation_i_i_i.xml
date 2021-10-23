@@ -70,55 +70,71 @@
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Which days would you like to work out?" />
+        android:text="How many days do you want to train?" />
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="1"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
+    <!--    https://www.youtube.com/watch?v=-3BA0azZS-E-->
 
-<!--    https://www.youtube.com/watch?v=-3BA0azZS-E-->
-
-    <LinearLayout
-        android:layout_marginTop="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="vertical">
+<!--    <LinearLayout-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:orientation="vertical">-->
 
 
-        <CheckBox
-            android:id="@+id/monday"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Monday" />
-        <CheckBox
-            android:id="@+id/tuesday"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tuesday" />
-        <CheckBox
-            android:id="@+id/wednesday"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Wednesday" />
-        <CheckBox
-            android:id="@+id/thursday"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Thursday" />
-        <CheckBox
-            android:id="@+id/friday"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Friday" />
-        <CheckBox
-            android:id="@+id/saturday"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Saturday" />
-        <CheckBox
-            android:id="@+id/sunday"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sunday" />
-    </LinearLayout>
+<!--        <CheckBox-->
+<!--            android:id="@+id/monday"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Monday" />-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/tuesday"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Tuesday" />-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/wednesday"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Wednesday" />-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/thursday"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Thursday" />-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/friday"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Friday" />-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/saturday"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Saturday" />-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/sunday"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Sunday" />-->
+<!--    </LinearLayout>-->
 
 </LinearLayout>
