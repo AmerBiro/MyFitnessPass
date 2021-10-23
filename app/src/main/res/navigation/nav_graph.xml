@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/splashScreenFragment">
+    app:startDestination="@id/homeView">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -40,12 +40,12 @@
         android:label="home"
         tools:layout="@layout/home" >
         <action
-            android:id="@+id/action_homeView_to_programCreationI"
-            app:destination="@id/programCreationI" />
-        <action
             android:id="@+id/action_homeView_to_loginFragment"
             app:destination="@id/loginFragment"
             />
+        <action
+            android:id="@+id/action_homeView_to_programCreationI"
+            app:destination="@id/programCreationI" />
     </fragment>
 
 
