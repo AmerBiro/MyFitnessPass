@@ -136,7 +136,7 @@
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_margin="5dp"
-            android:background="@drawable/ic_baseline_more_vert_24" />
+            android:background="@drawable/ic_more_horiz" />
 
     </LinearLayout>
 
