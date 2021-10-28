@@ -29,12 +29,19 @@ class SplashScreenFragment : BaseFragment(R.layout.splash_screen) {
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+    }
+
 
     private fun accountChecker() {
             var delay = Runnable {
                 findNavController().navigate(R.id.action_splashScreenFragment_to_loginFragment)
             }
             handler.postDelayed(delay, duration.toLong())
+
+
 
     }
 }

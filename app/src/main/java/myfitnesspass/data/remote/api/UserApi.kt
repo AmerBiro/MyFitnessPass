@@ -17,22 +17,4 @@ interface UserApi {
     suspend fun login(
         @Body loginRequest: UserRequest
     ): Response<SimpleResponse>
-
-//    @POST("/addNote")
-//    suspend fun addNote(
-//        @Body program: Program
-//    ): Response<ResponseBody>
-//
-//    @POST("/deleteNote")
-//    suspend fun deleteNote(
-//        @Body deleteNoteRequest: DeleteNoteRequest
-//    ): Response<ResponseBody>
-//
-//    @POST("/addOwnerToNote")
-//    suspend fun addOwnerToNote(
-//        @Body addOwnerRequest: AddOwnerRequest
-//    ): Response<SimpleResponse>
-//
-//    @GET("/getNotes")
-//    suspend fun getNotes(): Response<List<Program>>
 }

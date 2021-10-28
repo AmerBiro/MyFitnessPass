@@ -1,7 +1,6 @@
 package myfitnesspass.repositories
 
 import android.app.Application
-import myfitnesspass.data.local.dao.ProgramDao
 import myfitnesspass.data.remote.api.UserApi
 import myfitnesspass.data.remote.requests.user.UserRequest
 import myfitnesspass.other.Resource
