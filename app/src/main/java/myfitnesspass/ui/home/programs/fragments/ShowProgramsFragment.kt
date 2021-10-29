@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,7 +13,7 @@ import myfitnesspass.fitness.myfitness.R
 import myfitnesspass.fitness.myfitness.databinding.FragmentProgramShowBinding
 import myfitnesspass.ui.BaseFragment
 
-class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show) {
+class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show), ProgramAdapter.OnItemClickListener {
 
     private var _binding: FragmentProgramShowBinding? = null
     private val binding get() = _binding!!
@@ -32,7 +33,7 @@ class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show) {
 
         binding.recyclerview.layoutManager = layoutManger
 
-        adapter  =ProgramAdapter(requireContext())
+        adapter  =ProgramAdapter(requireContext(),this)
         binding.recyclerview.adapter = adapter
 
 
@@ -44,5 +45,11 @@ class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show) {
 
 
         return view
+    }
+
+    override fun onItemClick(position: Int) {
+       Toast.makeText(requireContext(),"item $position clicked",Toast.LENGTH_SHORT).show()
+        findNavController().navigate(R.id.action_homeView_to_programView)
+        //findNavController().popBackStack()
     }
 }

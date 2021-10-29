@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
+import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
@@ -15,9 +16,11 @@ import myfitnesspass.fitness.myfitness.R
 import kotlinx.android.synthetic.main.program_list_view.view.*
 
 //https://www.youtube.com/watch?v=k_UZkS_L61Y kotlin android how to add in recyclerview popup menu
-class ProgramAdapter(val c:Context) : RecyclerView.Adapter<ProgramAdapter.ProgramViewHolder>() {
+class ProgramAdapter(val c:Context,
+                     val listener : OnItemClickListener
+) :
+    RecyclerView.Adapter<ProgramAdapter.ProgramViewHolder>() {
 
-    inner class ProgramViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 
     private val diffCallback = object : DiffUtil.ItemCallback<Program>() {
         override fun areItemsTheSame(oldItem: Program, newItem: Program): Boolean {
@@ -62,29 +65,68 @@ class ProgramAdapter(val c:Context) : RecyclerView.Adapter<ProgramAdapter.Progra
     }
 
     override fun onBindViewHolder(holder: ProgramViewHolder, position: Int) {
-       // val program = programs[position]
-        holder.itemView.apply {
-//            program_name.text = program.programName
-//            program_coach.text = program.coach
-//            program_description.text = program.description
-//            program_days.text = program.days.toString()
-////            program_exercises.text = program
-//            program_date.text = "$program.startDate.toString() - ${program.endDate.toString()}"
+        holder.programName.text =programName[position]
+        holder.programDescription.text =programDescription[position]
+        holder.programCoach.text =coachName[position]
+        holder.programDays.text =programdays[position]
+        holder.programDate.text =programdate[position]
 
-            program_name.text = programName[position]
-            program_coach.text = coachName[position]
-            program_description.text = programDescription[position]
-            program_days.text = programdays[position]
+
+
+       /*     program_name.text = programName[position]
+        program_coach.text = coachName[position]
+        program_description.text = programDescription[position]
+        program_days.text = programdays[position]
 //            program_exercises.text = program
-            program_date.text = programdate[position]
+        program_date.text = programdate[position]
 
 
-
-            menu_buttons.setOnClickListener {
-                popupMenu(it)
-
-            }
+        menu_buttons.setOnClickListener {
+            popupMenu(it)
         }
+
+        */
+
+
+
+      /*
+        val program = programs[position]
+        holder.itemView.apply {
+            program_name.text = program.programName
+            program_coach.text = program.coach
+            program_description.text = program.description
+            program_days.text = program.days.toString()
+//            program_exercises.text = program
+            program_date.text = "$program.startDate.toString() - ${program.endDate.toString()}"
+        }
+
+       */
+    }
+
+
+    inner class ProgramViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView),
+    View.OnClickListener{
+        val programName: TextView = itemView.program_name
+        val programDescription: TextView = itemView.program_description
+        val programDays: TextView = itemView.program_days
+        val programDate: TextView = itemView.program_date
+        val programCoach: TextView = itemView.program_coach
+
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val position = adapterPosition
+            if (position!= RecyclerView.NO_POSITION){
+                listener.onItemClick(position)
+            }
+
+        }
+    }
+
+    interface OnItemClickListener{
+        fun onItemClick(position: Int)
     }
 
 
@@ -105,7 +147,6 @@ class ProgramAdapter(val c:Context) : RecyclerView.Adapter<ProgramAdapter.Progra
 
             }
         }
-
         popupMenus.show()
         popupMenus.gravity = Gravity.LEFT
         val popup = PopupMenu::class.java.getDeclaredField("mPopup")

@@ -46,6 +46,9 @@
         <action
             android:id="@+id/action_homeView_to_programCreationI"
             app:destination="@id/programCreationI" />
+        <action
+            android:id="@+id/action_homeView_to_programView"
+            app:destination="@id/programView" />
     </fragment>
 
 
@@ -85,4 +88,9 @@
             android:id="@+id/action_signUpFragment_to_homeView"
             app:destination="@id/homeView" />
     </fragment>
+    <fragment
+        android:id="@+id/programView"
+        android:name="myfitnesspass.ui.home.programs.fragments.ProgramView"
+        android:label="fragment_program_view"
+        tools:layout="@layout/fragment_program_view" />
 </navigation>
