@@ -13,6 +13,12 @@ import myfitnesspass.fitness.myfitness.R
 import myfitnesspass.fitness.myfitness.databinding.FragmentProgramCreationIIBinding
 import myfitnesspass.fitness.myfitness.databinding.FragmentProgramCreationIIIBinding
 import myfitnesspass.ui.BaseFragment
+import android.widget.AdapterView
+
+import android.R.attr.x
+
+
+
 
 class ProgramCreationIII : BaseFragment(R.layout.fragment_program_creation_i_i_i){
 
@@ -37,8 +43,16 @@ class ProgramCreationIII : BaseFragment(R.layout.fragment_program_creation_i_i_i
         val numberOfDays = resources.getStringArray(R.array.numberOfDay)
         val arrayAdapter = ArrayAdapter(requireContext(),R.layout.dropdown_item,numberOfDays)
         binding.autoCompleteTextView.setAdapter(arrayAdapter)
+        //val x = binding.autoCompleteTextView.sele.toString()
 
 
+        //get output
+        binding.autoCompleteTextView.onItemClickListener = AdapterView.OnItemClickListener{
+                parent,view,position,id->
+            val selectedItem = parent.getItemAtPosition(position).toString()
+            // Display the clicked item using toast
+            Toast.makeText(requireContext(),"Selected : $selectedItem",Toast.LENGTH_SHORT).show()
+        }
 
 
 
