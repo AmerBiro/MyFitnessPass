@@ -116,6 +116,7 @@
         android:layout_marginStart="5dp"
         android:gravity="right"
         android:layout_weight="1"
+        android:layout_marginEnd="10dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"

@@ -28,7 +28,7 @@
         <Button
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:background="@drawable/ic_baseline_edit_24"
+            android:background="@drawable/ic_baseline_edit"
             android:layout_alignParentRight="true"
             android:layout_marginLeft="30dp"
             />

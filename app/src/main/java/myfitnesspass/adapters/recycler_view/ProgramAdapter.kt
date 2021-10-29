@@ -5,6 +5,7 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView
@@ -71,6 +72,10 @@ class ProgramAdapter(val c:Context,
         holder.programDays.text =programdays[position]
         holder.programDate.text =programdate[position]
 
+        holder.menuButton.setOnClickListener {
+            popupMenu(it)
+        }
+
 
 
        /*     program_name.text = programName[position]
@@ -111,10 +116,13 @@ class ProgramAdapter(val c:Context,
         val programDays: TextView = itemView.program_days
         val programDate: TextView = itemView.program_date
         val programCoach: TextView = itemView.program_coach
+        val menuButton: Button = itemView.menu_buttons
 
         init {
             itemView.setOnClickListener(this)
         }
+
+
 
         override fun onClick(v: View?) {
             val position = adapterPosition
