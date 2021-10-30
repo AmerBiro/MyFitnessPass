@@ -1,13 +1,140 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/linear_layout_main_page"
+    android:orientation="vertical"
     tools:context="myfitnesspass.ui.home.programs.fragments.ProgramCreationIIII">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <TextView
+            style="@style/page_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create a Program" />
+
+        <Button
+            android:id="@+id/button_next_arrow"
+            android:layout_width="65dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_next" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="5dp"
+        android:id="@+id/div_id"
+        style="@style/DividerI"
+        android:layout_below="@+id/linear_id" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="15dp"
+        android:orientation="horizontal">
+        <View
+            style="@style/DividerIII"
+            android:layout_weight="1"
+            android:layout_below="@+id/linear_id" />
+        <View
+            style="@style/DividerIII"
+            android:layout_weight="1"
+            android:layout_below="@+id/linear_id" />
+
+        <View
+            style="@style/DividerIII"
+            android:layout_weight="1"
+            android:layout_below="@+id/linear_id" />
+
+        <View
+            style="@style/DividerIII"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:layout_below="@+id/linear_id" />
+        <View
+            style="@style/DividerIII"
+            android:layout_weight="1"
+            android:layout_below="@+id/linear_id" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/page_counterII"
+        android:paddingTop="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How many days do you want to train?" />
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="1"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--    https://www.youtube.com/watch?v=-3BA0azZS-E-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_marginTop="30dp"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center_horizontal"-->
+    <!--        android:orientation="vertical">-->
+
+
+    <!--        <CheckBox-->
+    <!--            android:id="@+id/monday"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Monday" />-->
+    <!--        <CheckBox-->
+    <!--            android:id="@+id/tuesday"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Tuesday" />-->
+    <!--        <CheckBox-->
+    <!--            android:id="@+id/wednesday"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Wednesday" />-->
+    <!--        <CheckBox-->
+    <!--            android:id="@+id/thursday"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Thursday" />-->
+    <!--        <CheckBox-->
+    <!--            android:id="@+id/friday"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Friday" />-->
+    <!--        <CheckBox-->
+    <!--            android:id="@+id/saturday"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Saturday" />-->
+    <!--        <CheckBox-->
+    <!--            android:id="@+id/sunday"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Sunday" />-->
+    <!--    </LinearLayout>-->
+
+</LinearLayout>

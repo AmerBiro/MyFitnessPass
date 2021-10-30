@@ -78,50 +78,50 @@
         android:layout_width="match_parent"
         android:layout_margin="30dp"
         android:layout_height="wrap_content"
-        android:hint="Program Name"
+        android:background="@drawable/edit_text_background"
         app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:background="@null"
             android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-<!--    <RadioGroup-->
-<!--        android:layout_gravity="center_horizontal"-->
-<!--        android:layout_marginTop="15dp"-->
-<!--        android:id="@+id/radio_group"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content">-->
-<!--        <RadioButton-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:id="@+id/radio_one"-->
-<!--            android:text="Lose weight"-->
-<!--            />-->
-
-<!--        <RadioButton-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:id="@+id/radio_two"-->
-<!--            android:text="Be stronger"-->
-<!--            />-->
-
-<!--        <RadioButton-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:id="@+id/radio_three"-->
-<!--            android:text="Bigger muscles"-->
-<!--            />-->
 
 
-<!--    </RadioGroup>-->
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        style="@style/page_counterII"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Describe your program " />
 
 
 
 
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_margin="30dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/edit_text_background"
+
+        app:endIconMode="clear_text">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:gravity="start"
+            android:maxLines="10"
+            android:background="@null"
+            android:padding="10dp"
+            android:textColor="#000" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 </LinearLayout>

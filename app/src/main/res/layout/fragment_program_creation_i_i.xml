@@ -71,7 +71,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="When do you want to start?" />
+            android:text="Start Date" />
 
     <TextView
         style="@style/page_counterII"

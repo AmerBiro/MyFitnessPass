@@ -76,8 +76,8 @@
         android:label="fragment_program_creation_i_i_i"
         tools:layout="@layout/fragment_program_creation_i_i_i" >
         <action
-            android:id="@+id/action_programCreationIII_to_homeView"
-            app:destination="@id/homeView" />
+            android:id="@+id/action_programCreationIII_to_programCreationIIII"
+            app:destination="@id/programCreationIIII" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -93,4 +93,13 @@
         android:name="myfitnesspass.ui.home.programs.fragments.ProgramView"
         android:label="fragment_program_view"
         tools:layout="@layout/fragment_program_view" />
+    <fragment
+        android:id="@+id/programCreationIIII"
+        android:name="myfitnesspass.ui.home.programs.fragments.ProgramCreationIIII"
+        android:label="fragment_program_creation_i_i_i_i"
+        tools:layout="@layout/fragment_program_creation_i_i_i_i" >
+        <action
+            android:id="@+id/action_programCreationIIII_to_homeView"
+            app:destination="@id/homeView" />
+    </fragment>
 </navigation>

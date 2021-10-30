@@ -27,13 +27,13 @@ class ProgramCreationII : BaseFragment(R.layout.fragment_program_creation_i_i) {
         val view = binding.root
 
 
-
         binding.buttonNextArrow.setOnClickListener {
            findNavController().navigate(R.id.action_programCreationII_to_programCreationIII)
 
         }
-        val myCalendar = Calendar.getInstance()
 
+
+        val myCalendar = Calendar.getInstance()
 
         binding.calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
             myCalendar.set(Calendar.YEAR,year)

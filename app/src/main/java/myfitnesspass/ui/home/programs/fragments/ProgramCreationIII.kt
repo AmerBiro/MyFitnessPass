@@ -1,23 +1,14 @@
 package myfitnesspass.ui.home.programs.fragments
-
 import android.os.Bundle
-import android.text.InputType
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import myfitnesspass.fitness.myfitness.R
-import myfitnesspass.fitness.myfitness.databinding.FragmentProgramCreationIIBinding
 import myfitnesspass.fitness.myfitness.databinding.FragmentProgramCreationIIIBinding
 import myfitnesspass.ui.BaseFragment
-import android.widget.AdapterView
-
-import android.R.attr.x
-
-
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class ProgramCreationIII : BaseFragment(R.layout.fragment_program_creation_i_i_i){
@@ -32,36 +23,33 @@ class ProgramCreationIII : BaseFragment(R.layout.fragment_program_creation_i_i_i
         _binding = FragmentProgramCreationIIIBinding.inflate(inflater, container, false)
         val view = binding.root
 
-
         binding.buttonNextArrow.setOnClickListener {
-            findNavController().navigate(R.id.action_programCreationIII_to_homeView)
+            findNavController().navigate(R.id.action_programCreationIII_to_programCreationIIII)
 
         }
 
 
-        binding.autoCompleteTextView.inputType = InputType.TYPE_NULL
-        val numberOfDays = resources.getStringArray(R.array.numberOfDay)
-        val arrayAdapter = ArrayAdapter(requireContext(),R.layout.dropdown_item,numberOfDays)
-        binding.autoCompleteTextView.setAdapter(arrayAdapter)
-        //val x = binding.autoCompleteTextView.sele.toString()
+        val myCalendar = Calendar.getInstance()
 
-
-        //get output
-        binding.autoCompleteTextView.onItemClickListener = AdapterView.OnItemClickListener{
-                parent,view,position,id->
-            val selectedItem = parent.getItemAtPosition(position).toString()
-            // Display the clicked item using toast
-            Toast.makeText(requireContext(),"Selected : $selectedItem",Toast.LENGTH_SHORT).show()
+        binding.calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
+            myCalendar.set(Calendar.YEAR,year)
+            myCalendar.set(Calendar.MONTH,month)
+            myCalendar.set(Calendar.DAY_OF_MONTH,dayOfMonth)
+            updateLabel(myCalendar)
         }
-
-
-
-
 
 
 
 
         return view
     }
+
+    private fun updateLabel(myCalendar: Calendar) {
+        val myFormat  ="dd-MM-yyyy"
+        val sdf  = SimpleDateFormat(myFormat,Locale.getDefault())
+        binding.showDate.text = sdf.format(myCalendar.time)
+
+    }
+
 
 }
