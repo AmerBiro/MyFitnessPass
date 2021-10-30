@@ -47,6 +47,8 @@ class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show), Progra
         return view
     }
 
+
+
     override fun onItemClick(position: Int) {
        Toast.makeText(requireContext(),"item $position clicked",Toast.LENGTH_SHORT).show()
         findNavController().navigate(R.id.action_homeView_to_programView)

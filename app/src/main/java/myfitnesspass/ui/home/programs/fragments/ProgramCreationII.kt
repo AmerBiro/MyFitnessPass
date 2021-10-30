@@ -32,6 +32,10 @@ class ProgramCreationII : BaseFragment(R.layout.fragment_program_creation_i_i) {
 
         }
 
+        binding.buttonBackArrow.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
+
 
         val myCalendar = Calendar.getInstance()
 
