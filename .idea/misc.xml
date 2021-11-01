@@ -55,11 +55,15 @@
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/activity_main.xml" value="0.23125" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/auth_login.xml" value="0.3625" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/auth_sign_up.xml" value="0.3625" />
+        <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/button_date_picker.xml" value="0.3625" />
+        <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/day_list_view.xml" value="0.5" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/dialog_choose_photo.xml" value="0.3625" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/dropdown_item.xml" value="0.3625" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_blank.xml" value="0.3625" />
+        <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_coach_create.xml" value="0.3625" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_coach_show.xml" value="0.3625" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_fitness_coach_view.xml" value="0.3625" />
+        <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_fitness_show.xml" value="0.3625" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_graph_view.xml" value="0.3625" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_menu_view.xml" value="0.33" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_program_creation_i.xml" value="0.33" />
@@ -68,13 +72,13 @@
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_program_creation_i_i_i_i.xml" value="0.33" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_program_creation_i_i_i_i_i.xml" value="0.33" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_program_show.xml" value="0.33" />
-        <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_program_view.xml" value="0.5" />
+        <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_program_view.xml" value="0.33" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_view_program_creation.xml" value="0.22864583333333333" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/home.xml" value="0.3625" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/profile_body.xml" value="0.3625" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/profile_gender_birth.xml" value="0.22864583333333333" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/profile_membership.xml" value="0.3625" />
-        <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/profile_photo.xml" value="0.22864583333333333" />
+        <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/profile_photo.xml" value="0.33" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/profile_view.xml" value="0.3625" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/program_list_view.xml" value="0.3625" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/menu/menu.xml" value="0.3265625" />

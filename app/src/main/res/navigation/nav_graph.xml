@@ -92,7 +92,11 @@
         android:id="@+id/programView"
         android:name="myfitnesspass.ui.home.programs.fragments.ProgramView"
         android:label="fragment_program_view"
-        tools:layout="@layout/fragment_program_view" />
+        tools:layout="@layout/fragment_program_view" >
+        <action
+            android:id="@+id/action_programView_to_dayCreationI"
+            app:destination="@id/dayCreationI" />
+    </fragment>
     <fragment
         android:id="@+id/programCreationIIII"
         android:name="myfitnesspass.ui.home.programs.fragments.ProgramCreationIIII"
@@ -112,6 +116,11 @@
             app:destination="@id/homeView"
             app:popUpTo="@id/homeView" /><!--fix back stack-->
     </fragment>
+    <fragment
+        android:id="@+id/dayCreationI"
+        android:name="myfitnesspass.ui.subhome.programdays.fragments.DayCreationI"
+        android:label="fragment_day_creation_i"
+        tools:layout="@layout/fragment_day_creation_i" />
 
 
 </navigation>

@@ -55,6 +55,12 @@
     </style>
 
 
+    <style name="page_counterIII">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+
     <style name="page_description">
         <item name="android:layout_marginTop">24dp</item>
         <item name="android:textSize">16sp</item>

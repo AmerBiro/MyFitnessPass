@@ -23,7 +23,7 @@
             android:layout_width="67.69dp"
             android:layout_height="25dp"
             android:layout_alignParentRight="true"
-            android:background="@drawable/ic_done_button" />
+            android:background="@drawable/ic_done" />
 
 
     </RelativeLayout>
