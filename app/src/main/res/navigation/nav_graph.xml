@@ -97,8 +97,8 @@
             android:id="@+id/action_programView_to_dayCreationI"
             app:destination="@id/dayCreationI" />
         <action
-            android:id="@+id/action_programView_to_showSetsFragment"
-            app:destination="@id/showSetsFragment" />
+            android:id="@+id/action_programView_to_showExercisesFragment"
+            app:destination="@id/showExercisesFragment" />
     </fragment>
     <fragment
         android:id="@+id/programCreationIIII"
@@ -125,10 +125,10 @@
         android:label="fragment_day_creation_i"
         tools:layout="@layout/fragment_day_creation_i" />
     <fragment
-        android:id="@+id/showSetsFragment"
-        android:name="myfitnesspass.ui.subhome.sets.fragments.ShowSetsFragment"
-        android:label="fragment_show_sets"
-        tools:layout="@layout/fragment_show_sets" />
+        android:id="@+id/showExercisesFragment"
+        android:name="myfitnesspass.ui.subhome.exercises.fragments.ShowExercisesFragment"
+        android:label="fragment_show_exercises"
+        tools:layout="@layout/fragment_show_exercises" />
 
 
 </navigation>

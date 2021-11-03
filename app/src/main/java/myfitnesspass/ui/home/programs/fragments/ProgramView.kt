@@ -56,7 +56,7 @@ class ProgramView : BaseFragment(R.layout.fragment_program_view), DayAdapter.OnI
 
     override fun onItemClick(position: Int) {
         Toast.makeText(requireContext(),"item $position clicked", Toast.LENGTH_SHORT).show()
-        findNavController().navigate(R.id.action_programView_to_showSetsFragment)
+        findNavController().navigate(R.id.action_programView_to_showExercisesFragment)
         //findNavController().popBackStack()
     }
 
