@@ -42,13 +42,8 @@ class ProgramView : BaseFragment(R.layout.fragment_program_view), DayAdapter.OnI
         adapter  =DayAdapter(this)
         binding.recyclerviewDays.adapter = adapter
 
+        //to show how many items we have in the recycler view "the numbers of days"
         binding.daysText.text = binding.recyclerviewDays.adapter?.itemCount.toString()
-
-
-
-
-
-
 
 
         return view

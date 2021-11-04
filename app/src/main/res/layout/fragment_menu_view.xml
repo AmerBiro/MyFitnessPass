@@ -14,7 +14,6 @@
         android:layout_marginTop="40dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:gravity="center_horizontal"
         android:layout_height="wrap_content"
         android:background="@drawable/border_shadow_iii"
         android:orientation="vertical">
@@ -22,15 +21,15 @@
         <Button
             android:id="@+id/button_back_arrow"
             android:layout_margin="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="47dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:background="@drawable/ic_personal_info" />
 
         <Button
             android:id="@+id/body_info"
             android:layout_margin="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="47dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:background="@drawable/ic_body_info" />
     </LinearLayout>
 
@@ -50,29 +49,29 @@
 
         <Button
             android:id="@+id/profile_photo"
-            android:layout_width="wrap_content"
-            android:layout_height="47dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_margin="8dp"
             android:background="@drawable/ic_profile_photo" />
 
         <Button
             android:id="@+id/settings"
-            android:layout_width="wrap_content"
-            android:layout_height="47dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_margin="8dp"
             android:background="@drawable/ic_settings" />
 
         <Button
             android:id="@+id/account"
-            android:layout_width="wrap_content"
-            android:layout_height="47dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_margin="8dp"
             android:background="@drawable/ic_account" />
 
         <Button
             android:id="@+id/log_out"
-            android:layout_width="wrap_content"
-            android:layout_height="47dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_margin="8dp"
             android:background="@drawable/ic_logout" />
 
@@ -92,15 +91,15 @@
 
         <Button
             android:id="@+id/about_us"
-            android:layout_width="wrap_content"
-            android:layout_height="47dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_margin="8dp"
             android:background="@drawable/ic_about_us" />
 
         <Button
             android:id="@+id/help"
-            android:layout_width="wrap_content"
-            android:layout_height="47dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_margin="8dp"
             android:background="@drawable/ic_help" />
     </LinearLayout>

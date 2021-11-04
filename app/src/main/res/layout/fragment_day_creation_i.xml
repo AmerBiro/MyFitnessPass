@@ -38,7 +38,7 @@
         style="@style/page_counterII"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add name to your day  " />
+        android:text="Days name  " />
 
 
     <com.google.android.material.textfield.TextInputLayout
