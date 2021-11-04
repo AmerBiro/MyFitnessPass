@@ -128,7 +128,16 @@
         android:id="@+id/showExercisesFragment"
         android:name="myfitnesspass.ui.subhome.exercises.fragments.ShowExercisesFragment"
         android:label="fragment_show_exercises"
-        tools:layout="@layout/fragment_show_exercises" />
+        tools:layout="@layout/fragment_show_exercises" >
+        <action
+            android:id="@+id/action_showExercisesFragment_to_exerciseCreationI"
+            app:destination="@id/exerciseCreationI" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseCreationI"
+        android:name="myfitnesspass.ui.subhome.exercises.fragments.ExerciseCreationI"
+        android:label="fragment_exercise_creation_i"
+        tools:layout="@layout/fragment_exercise_creation_i" />
 
 
 </navigation>
