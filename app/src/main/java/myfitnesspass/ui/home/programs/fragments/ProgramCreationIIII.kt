@@ -38,13 +38,6 @@ class ProgramCreationIIII : BaseFragment(R.layout.fragment_program_creation_i_i_
         }
 
 
-        binding.autoCompleteTextView.inputType = InputType.TYPE_NULL
-        val numberOfDays = resources.getStringArray(R.array.numberOfDay)
-        val arrayAdapter = ArrayAdapter(requireContext(),R.layout.dropdown_item,numberOfDays)
-        binding.autoCompleteTextView.setAdapter(arrayAdapter)
-        //val x = binding.autoCompleteTextView.sele.toString()
-
-
         //get output
         binding.autoCompleteTextView.onItemClickListener = AdapterView.OnItemClickListener{
                 parent,view,position,id->
@@ -53,6 +46,17 @@ class ProgramCreationIIII : BaseFragment(R.layout.fragment_program_creation_i_i_
             Toast.makeText(requireContext(),"Selected : $selectedItem",Toast.LENGTH_SHORT).show()
         }
         return view
+
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+        binding.autoCompleteTextView.inputType = InputType.TYPE_NULL
+        val programType = resources.getStringArray(R.array.programType)
+        val arrayAdapter = ArrayAdapter(requireContext(),R.layout.dropdown_item,programType)
+        binding.autoCompleteTextView.setAdapter(arrayAdapter)
+        //val x = binding.autoCompleteTextView.sele.toString()
 
     }
 

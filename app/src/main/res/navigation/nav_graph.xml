@@ -137,7 +137,16 @@
         android:id="@+id/exerciseCreationI"
         android:name="myfitnesspass.ui.subhome.exercises.fragments.ExerciseCreationI"
         android:label="fragment_exercise_creation_i"
-        tools:layout="@layout/fragment_exercise_creation_i" />
+        tools:layout="@layout/fragment_exercise_creation_i" >
+        <action
+            android:id="@+id/action_exerciseCreationI_to_exerciseCreationII"
+            app:destination="@id/exerciseCreationII" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseCreationII"
+        android:name="myfitnesspass.ui.subhome.exercises.fragments.ExerciseCreationII"
+        android:label="fragment_exercise_creation_i_i"
+        tools:layout="@layout/fragment_exercise_creation_i_i" />
 
 
 </navigation>

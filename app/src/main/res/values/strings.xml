@@ -4,16 +4,19 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="underline"><u>By Thomas Andersen</u></string>
     <string name="des">This course has been designed for fat \nburning and muscles gowing</string>
-    <string-array name="numberOfDay">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
+    <string-array name="programType">
+        <item>Lose Weight</item>
+        <item>Gain Muscle Mass</item>
+        <item>Be stronger</item>
+        <item>Get shredded</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="exerciseType">
+        <item>Lose Weight</item>
+        <item>Gain Muscle Mass</item>
+        <item>Be stronger</item>
+        <item>Get shredded</item>
+        <item>Other</item>
     </string-array>
 </resources>

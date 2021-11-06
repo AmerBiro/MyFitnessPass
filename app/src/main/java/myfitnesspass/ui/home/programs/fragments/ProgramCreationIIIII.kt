@@ -28,8 +28,10 @@ class ProgramCreationIIIII : BaseFragment(R.layout.fragment_program_creation_i_i
             findNavController().navigate(R.id.action_programCreationIIIII_to_homeView)
 
         }
+
         binding.buttonBackArrow.setOnClickListener {
-            requireActivity().onBackPressed()
+           requireActivity().onBackPressed()
+
         }
 
 

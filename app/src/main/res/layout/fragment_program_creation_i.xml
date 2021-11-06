@@ -66,18 +66,18 @@
     </LinearLayout>
 
     <TextView
-        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         style="@style/page_counterII"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What is your program called? " />
+        android:text="What is your program name? " />
 
 
     <com.google.android.material.textfield.TextInputLayout
 
         android:layout_width="match_parent"
-        android:layout_margin="30dp"
+        android:layout_margin="20dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_background"
         app:endIconMode="clear_text">
@@ -94,7 +94,7 @@
 
 
     <TextView
-        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         style="@style/page_counterII"
         android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
     <com.google.android.material.textfield.TextInputLayout
 
         android:layout_width="match_parent"
-        android:layout_margin="30dp"
+        android:layout_margin="20dp"
         android:layout_height="match_parent"
         android:background="@drawable/edit_text_background"
 

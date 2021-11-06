@@ -45,7 +45,7 @@
 
 
     <ScrollView
-
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -54,11 +54,21 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
             <TextView
+                android:id="@+id/descriptions"
+                android:layout_width="match_parent"
+                style="@style/page_counterII"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:text="Description" />
+            <TextView
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 style="@style/page_counterIII"
+                android:layout_marginTop="5dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
                 android:text="@string/des" />
 
             <ImageView
@@ -80,21 +90,21 @@
 
                 <TextView
                     android:gravity="center_horizontal"
-                    android:id="@+id/intensity"
+                    android:id="@+id/type"
                     android:layout_width="0dp"
                     style="@style/page_subtitleII"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Intensity" />
+                    android:text="Type" />
 
                 <TextView
                     android:gravity="center_horizontal"
-                    android:id="@+id/exercises"
+                    android:id="@+id/period"
                     android:layout_width="0dp"
                     style="@style/page_subtitleII"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Exercises" />
+                    android:text="Period" />
 
                 <TextView
                     android:gravity="center_horizontal"
@@ -118,7 +128,7 @@
 
                 <TextView
                     android:gravity="center_horizontal"
-                    android:id="@+id/intensity_text"
+                    android:id="@+id/type_text"
                     android:layout_width="0dp"
                     style="@style/page_subtitle"
                     android:layout_height="match_parent"
@@ -127,12 +137,13 @@
 
                 <TextView
                     android:gravity="center_horizontal"
-                    android:id="@+id/exercises_text"
+                    android:id="@+id/period_text"
                     android:layout_width="0dp"
                     style="@style/page_subtitle"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="-" />
+
 
                 <TextView
                     android:gravity="center_horizontal"
@@ -144,11 +155,13 @@
                     android:text="-" />
 
             </LinearLayout>
-
             <View
                 android:layout_marginTop="5dp"
                 style="@style/DividerII"
                 android:layout_below="@+id/linear_id" />
+
+
+
 
 
             <androidx.recyclerview.widget.RecyclerView
