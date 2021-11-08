@@ -30,7 +30,7 @@ class ShowExercisesFragment : BaseFragment(R.layout.fragment_show_exercises),Exe
         val view = binding.root
 
 
-        binding.addButton.setOnClickListener {
+        binding.addExercise.setOnClickListener {
             findNavController().navigate(R.id.action_showExercisesFragment_to_exerciseCreationI)
 
         }

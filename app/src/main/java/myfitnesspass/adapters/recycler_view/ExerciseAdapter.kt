@@ -51,7 +51,6 @@ class ExerciseAdapter(val c: Context,
         val exerciseNameTextView :TextView = itemView.exercise_name
         val moreButton: Button = itemView.more_button
 
-
         init {
             itemView.setOnClickListener(this)
         }

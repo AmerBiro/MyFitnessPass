@@ -37,7 +37,7 @@ class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show), Progra
         binding.recyclerview.adapter = adapter
 
 
-        binding.addButton.setOnClickListener {
+        binding.addProgram.setOnClickListener {
               findNavController().navigate(R.id.action_homeView_to_programCreationI)
 
         }

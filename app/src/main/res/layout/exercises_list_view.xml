@@ -30,6 +30,5 @@
             android:background="@drawable/ic_more_horiz"
             />
 
-
     </LinearLayout>
 </LinearLayout>

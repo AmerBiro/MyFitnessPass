@@ -48,7 +48,7 @@
                 android:background="@drawable/ic_favorite" />
 
             <Button
-                android:id="@+id/add_button"
+                android:id="@+id/add_program"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_margin="5dp"

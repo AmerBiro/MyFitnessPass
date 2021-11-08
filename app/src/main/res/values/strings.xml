@@ -13,10 +13,11 @@
     </string-array>
 
     <string-array name="exerciseType">
-        <item>Lose Weight</item>
-        <item>Gain Muscle Mass</item>
-        <item>Be stronger</item>
-        <item>Get shredded</item>
+        <item>Arms</item>
+        <item>Abs</item>
+        <item>Back</item>
+        <item>Legs and Butt</item>
+        <item>Run</item>
         <item>Other</item>
     </string-array>
 </resources>
