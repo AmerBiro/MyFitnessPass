@@ -1,13 +1,91 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="myfitnesspass.ui.home.programs.fragments.UpdateProgramFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/viewtext"
+            style="@style/page_counterII"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_toRightOf="@+id/back_btn"
+            android:text="Update Program" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/div_id"
+        style="@style/DividerII" />
+
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_shadow_iii"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_name_program"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_program_name" />
+
+        <Button
+            android:id="@+id/button_date_program"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_program_date" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_shadow_iii"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_coach_program"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_coach_of_program" />
+
+        <Button
+            android:id="@+id/button_fitness_program"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_fitness_of_program" />
+    </LinearLayout>
+
+</LinearLayout>

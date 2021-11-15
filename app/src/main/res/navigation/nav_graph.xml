@@ -154,7 +154,20 @@
         android:id="@+id/updateProgramFragment"
         android:name="myfitnesspass.ui.home.programs.fragments.UpdateProgramFragment"
         android:label="fragment_update_program"
-        tools:layout="@layout/fragment_update_program" />
+        tools:layout="@layout/fragment_update_program" >
+        <action
+            android:id="@+id/action_updateProgramFragment_to_programCreationI"
+            app:destination="@id/programCreationI" />
+        <action
+            android:id="@+id/action_updateProgramFragment_to_programCreationII"
+            app:destination="@id/programCreationII" />
+        <action
+            android:id="@+id/action_updateProgramFragment_to_programCreationIIII"
+            app:destination="@id/programCreationIIII" />
+        <action
+            android:id="@+id/action_updateProgramFragment_to_programCreationIIIII"
+            app:destination="@id/programCreationIIIII" />
+    </fragment>
 
 
 </navigation>

@@ -19,7 +19,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button_back_arrow"
+            android:id="@+id/button_personal_info"
             android:layout_margin="8dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"

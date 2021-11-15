@@ -132,6 +132,7 @@ class ProgramAdapter(val c:Context,
 
         override fun onClick(v: View?) {
             val position = adapterPosition
+
             if (position!= RecyclerView.NO_POSITION){
                 listener.onItemClick(position)
             }
@@ -145,6 +146,8 @@ class ProgramAdapter(val c:Context,
 
 
 
+
+
     private fun popupMenu(v:View){
         val popupMenus = PopupMenu(c.applicationContext,v)
         popupMenus.inflate(R.menu.program_item_more)
@@ -152,8 +155,9 @@ class ProgramAdapter(val c:Context,
             when(it.itemId){
                 R.id.edit -> {
                     //todo
-                    val editV = HomeViewDirections.actionHomeViewToUpdateProgramFragment()
-                    Navigation.findNavController(v).navigate(editV)
+                    val vi = HomeViewDirections.actionHomeViewToUpdateProgramFragment()
+                    Navigation.findNavController(v).navigate(vi)
+
                     true
                 }
 
@@ -176,3 +180,11 @@ class ProgramAdapter(val c:Context,
 
 
 }
+
+
+/*
+val editV = HomeViewDirections.actionHomeViewToUpdateProgramFragment()
+
+Navigation.findNavController(v).navigate(editV)
+
+ */
