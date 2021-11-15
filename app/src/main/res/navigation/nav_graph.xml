@@ -49,6 +49,9 @@
         <action
             android:id="@+id/action_homeView_to_programView"
             app:destination="@id/programView" />
+        <action
+            android:id="@+id/action_homeView_to_updateProgramFragment"
+            app:destination="@id/updateProgramFragment" />
     </fragment>
 
 
@@ -147,6 +150,11 @@
         android:name="myfitnesspass.ui.subhome.exercises.fragments.ExerciseCreationII"
         android:label="fragment_exercise_creation_i_i"
         tools:layout="@layout/fragment_exercise_creation_i_i" />
+    <fragment
+        android:id="@+id/updateProgramFragment"
+        android:name="myfitnesspass.ui.home.programs.fragments.UpdateProgramFragment"
+        android:label="fragment_update_program"
+        tools:layout="@layout/fragment_update_program" />
 
 
 </navigation>

@@ -1,6 +1,7 @@
 package myfitnesspass.adapters.recycler_view
 
 import android.content.Context
+import android.content.Intent
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -8,12 +9,18 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.PopupMenu
 import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import myfitnesspass.data.local.entities.Program
 import myfitnesspass.fitness.myfitness.R
 import kotlinx.android.synthetic.main.program_list_view.view.*
+import myfitnesspass.fitness.myfitness.databinding.SplashScreenBinding
+import myfitnesspass.ui.home.homeview.fragments.HomeViewDirections
+import myfitnesspass.ui.splash_screen.fragments.SplashScreenFragmentDirections
 
 //https://www.youtube.com/watch?v=k_UZkS_L61Y kotlin android how to add in recyclerview popup menu
 class ProgramAdapter(val c:Context,
@@ -137,12 +144,16 @@ class ProgramAdapter(val c:Context,
     }
 
 
+
     private fun popupMenu(v:View){
         val popupMenus = PopupMenu(c.applicationContext,v)
         popupMenus.inflate(R.menu.program_item_more)
         popupMenus.setOnMenuItemClickListener {
             when(it.itemId){
                 R.id.edit -> {
+                    //todo
+                    val editV = HomeViewDirections.actionHomeViewToUpdateProgramFragment()
+                    Navigation.findNavController(v).navigate(editV)
                     true
                 }
 
