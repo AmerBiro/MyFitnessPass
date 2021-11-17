@@ -52,6 +52,7 @@
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/drawable/ic_shared.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/drawable/ic_skip.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/drawable/search_view_background.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/drawable/shadow.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/activity_main.xml" value="0.23125" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/auth_login.xml" value="0.3625" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/auth_sign_up.xml" value="0.3625" />
@@ -81,7 +82,7 @@
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_show_day.xml" value="0.3625" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_show_exercises.xml" value="0.67" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_show_sets.xml" value="0.3625" />
-        <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_update_program.xml" value="0.3625" />
+        <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_update_program.xml" value="0.5" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/fragment_view_program_creation.xml" value="0.22864583333333333" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/home.xml" value="0.3625" />
         <entry key="..\:/Users/Sulai/AndroidStudioProjects/MyFitnessPass/app/src/main/res/layout/profile_body.xml" value="0.3625" />
