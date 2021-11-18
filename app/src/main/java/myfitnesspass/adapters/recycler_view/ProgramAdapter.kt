@@ -2,6 +2,7 @@ package myfitnesspass.adapters.recycler_view
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Paint
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -77,6 +78,7 @@ class ProgramAdapter(val c:Context,
         holder.programCoach.text =coachName[position]
         holder.programDays.text =programdays[position]
         holder.programDate.text =programdate[position]
+        holder.programCoach.paintFlags= Paint.UNDERLINE_TEXT_FLAG
 
         holder.menuButton.setOnClickListener {
             popupMenu(it)

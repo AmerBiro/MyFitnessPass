@@ -36,6 +36,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:text="Fat Burning"
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -124,23 +125,23 @@
 
         <Button
             android:id="@+id/favorite_button"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_margin="5dp"
             android:background="@drawable/ic_favorite" />
 
 
         <Button
             android:id="@+id/share_button"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_margin="5dp"
             android:background="@drawable/ic_baseline_share_24" />
 
         <Button
             android:id="@+id/menu_buttons"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_margin="5dp"
             android:background="@drawable/ic_more_horiz" />
 

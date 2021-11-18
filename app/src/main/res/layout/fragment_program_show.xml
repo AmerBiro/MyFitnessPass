@@ -35,22 +35,22 @@
 
             <Button
                 android:id="@+id/favorite_id"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_margin="5dp"
                 android:background="@drawable/ic_shared" />
 
             <Button
                 android:id="@+id/share_id"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_margin="5dp"
                 android:background="@drawable/ic_favorite" />
 
             <Button
                 android:id="@+id/add_program"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_margin="5dp"
                 android:background="@drawable/ic_add" />
 
