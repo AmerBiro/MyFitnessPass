@@ -31,7 +31,7 @@ class UpdateProgramFragment : BaseFragment(R.layout.fragment_update_program) {
         }
 
 
-        binding.buttonNameProgram.setOnClickListener {
+        binding.linearEditProgramName.setOnClickListener {
             findNavController().navigate(R.id.action_updateProgramFragment_to_programCreationI)
         }
 

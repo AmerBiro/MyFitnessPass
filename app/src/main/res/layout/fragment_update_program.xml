@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="myfitnesspass.ui.home.programs.fragments.UpdateProgramFragment">
 
@@ -39,91 +40,176 @@
 
 
     <RelativeLayout
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:layout_centerHorizontal="true"
-            android:layout_margin="20dp"
             android:id="@+id/program_image_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
             android:scaleType="fitXY"
             android:src="@drawable/program_image" />
 
         <View
-            android:layout_centerHorizontal="true"
             android:id="@+id/dd"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_alignBottom="@+id/program_image_button"
+            android:layout_centerHorizontal="true"
             android:layout_marginHorizontal="20dp"
             android:background="@drawable/shadow" />
 
         <Button
             android:id="@+id/edit_button"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginBottom="10dp"
-            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/program_image_button"
-            android:background="@drawable/ic_edit_white" />
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:background="@null"
+            android:textSize="16dp"
+            android:text="Edit"
+            android:textColor="@color/white" />
+
+<!--        android:background="@drawable/ic_edit_white"-->
+<!--        android:layout_marginBottom="10dp"-->
 
     </RelativeLayout>
 
 
 
 
+    <LinearLayout
+        android:id="@+id/linear_edit_program_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginHorizontal="25dp"
+        android:orientation="horizontal"
+        android:layout_weight="0"
+        android:layout_marginTop="4dp">
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:background="@drawable/ic_edit_name_program" />
+        <TextView
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Program name"
+            style="@style/page_counterIIII"
+            />
+        <Button
+           android:layout_marginTop="5dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_edit"
+            />
+        </LinearLayout>
+    <View
+        android:layout_marginStart="30dp"
+        style="@style/DividerII" />
+
+
+    <LinearLayout
+        android:id="@+id/linear_edit_program_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginHorizontal="25dp"
+        android:orientation="horizontal"
+        android:layout_weight="0"
+        android:layout_marginTop="10dp">
+        <Button
+            android:layout_margin="5dp"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:background="@drawable/ic_description_program" />
+        <TextView
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/des"
+            style="@style/page_counterIIII"
+            />
+        <Button
+            android:layout_marginTop="5dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_edit"
+            />
+    </LinearLayout>
+    <View
+        android:layout_marginStart="30dp"
+        style="@style/DividerII" />
+
+    <!--    <LinearLayout-->
+<!--        android:padding="5dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/border_shadow_iii"-->
+<!--        android:orientation="vertical">-->
+
+
+<!--        <Button-->
+<!--            android:id="@+id/button_name_program"-->
+<!--            android:layout_margin="5dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:background="@drawable/ic_edit_name" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/button_description_program"-->
+<!--            android:layout_margin="5dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:background="@drawable/ic_description"/>-->
+
+<!--    </LinearLayout>-->
 
     <LinearLayout
         android:padding="5dp"
         android:layout_width="match_parent"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="25dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_height="wrap_content"
         android:background="@drawable/border_shadow_iii"
         android:orientation="vertical">
-
-        <Button
-            android:id="@+id/button_name_program"
-            android:layout_margin="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/ic_program_name" />
-
         <Button
             android:id="@+id/button_date_program"
             android:layout_margin="8dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/ic_program_date" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:padding="5dp"
-        android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border_shadow_iii"
-        android:orientation="vertical">
+            android:background="@drawable/ic_date" />
 
         <Button
             android:id="@+id/button_coach_program"
             android:layout_margin="8dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/ic_coach_of_program" />
+            android:background="@drawable/ic_your_coach" />
 
         <Button
             android:id="@+id/button_fitness_program"
             android:layout_margin="8dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/ic_fitness_of_program" />
+            android:background="@drawable/ic_yourfitness" />
     </LinearLayout>
 
 </LinearLayout>
