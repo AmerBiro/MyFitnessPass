@@ -100,6 +100,7 @@
             android:layout_height="29dp"
             android:background="@drawable/ic_edit_name_program" />
         <TextView
+            android:id="@+id/text_view_name"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
             android:layout_marginTop="7dp"
@@ -135,6 +136,7 @@
             android:layout_height="29dp"
             android:background="@drawable/ic_description_program" />
         <TextView
+            android:id="@+id/text_view_dec"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
             android:layout_marginTop="7dp"
