@@ -1,25 +1,36 @@
 package myfitnesspass.ui.home.programs.fragments
 
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_USER
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import dagger.hilt.android.AndroidEntryPoint
 import myfitnesspass.adapters.recycler_view.ProgramAdapter
+import myfitnesspass.adapters.recycler_view.ProgramsAD
 import myfitnesspass.fitness.myfitness.R
 import myfitnesspass.fitness.myfitness.databinding.FragmentProgramShowBinding
+import myfitnesspass.other.Status
 import myfitnesspass.ui.BaseFragment
+import myfitnesspass.ui.home.homeview.fragments.HomeViewDirections
+import myfitnesspass.ui.home.programs.viewmodel.ShowProgramsViewModel
 
-class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show), ProgramAdapter.OnItemClickListener {
+@AndroidEntryPoint
+class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show) {
+
+    private val viewModel: ShowProgramsViewModel by viewModels()
 
     private var _binding: FragmentProgramShowBinding? = null
     private val binding get() = _binding!!
 
-    private var layoutManger: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<ProgramAdapter.ProgramViewHolder>?  =null
+    private lateinit var programAdapter: ProgramsAD
+    private lateinit var view2: View
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,30 +39,67 @@ class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show), Progra
     ): View? {
         _binding = FragmentProgramShowBinding.inflate(inflater, container, false)
         val view = binding.root
-
-        layoutManger = LinearLayoutManager(requireContext())
-
-        binding.recyclerview.layoutManager = layoutManger
-
-        adapter  =ProgramAdapter(requireContext(),this)
-        binding.recyclerview.adapter = adapter
-
-
-        binding.addProgram.setOnClickListener {
-              findNavController().navigate(R.id.action_homeView_to_programCreationI)
-
-        }
-
-
-
         return view
     }
 
-
-
-    override fun onItemClick(position: Int) {
-       Toast.makeText(requireContext(),"item $position clicked",Toast.LENGTH_SHORT).show()
-        findNavController().navigate(R.id.action_homeView_to_programView)
-        //findNavController().popBackStack()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view2 = view
+        requireActivity().requestedOrientation = SCREEN_ORIENTATION_USER
+        setupRecyclerView()
+        subscribeToObservers()
+        onItemClickListener()
     }
+
+    private fun setupRecyclerView() = binding.recyclerview.apply {
+        programAdapter = ProgramsAD()
+        adapter = programAdapter
+        layoutManager = LinearLayoutManager(requireContext())
+    }
+
+    private fun onItemClickListener() {
+        programAdapter.setOnItemClickListener{
+            findNavController().navigate(
+                HomeViewDirections.actionHomeViewToProgramView(it.id)
+            )
+        }
+    }
+
+    private fun subscribeToObservers() {
+        viewModel.allPrograms.observe(viewLifecycleOwner, Observer {
+            it?.let{event ->
+                val result = event.peekContent()
+                when (result.status){
+
+                    Status.SUCCESS -> {
+                        programAdapter.programs = result.data!!
+                        binding.swipeRefreshLayout.isRefreshing = false
+                    }
+
+                    Status.LOADING -> {
+                        result.data?.let { programs ->
+                            programAdapter.programs = programs
+                        }
+                        binding.swipeRefreshLayout.isRefreshing = true
+                    }
+
+                    Status.ERROR -> {
+                        event.getContentIfNotHandled()?.let { errorResource ->
+                            errorResource.message?.let { message ->
+                                showSnackBar(view2, message)
+                            }
+                        }
+                        result.data?.let { programs ->
+                            programAdapter.programs = programs
+                        }
+                        binding.swipeRefreshLayout.isRefreshing = false
+                    }
+
+                }
+            }
+        })
+    }
+
+
+
 }

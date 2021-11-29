@@ -1,4 +1,4 @@
-package my.myfitness.myfitnesspass.data.remote.others
+package myfitnesspass.data.remote.others
 
 import myfitnesspass.other.Constants.IGNORE_AUTH_URLS
 import okhttp3.Credentials

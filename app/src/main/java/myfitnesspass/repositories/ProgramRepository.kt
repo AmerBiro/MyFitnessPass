@@ -16,7 +16,7 @@ import javax.inject.Inject
 
 class ProgramRepository @Inject constructor(
     private val programDao: ProgramDao,
-    private val programApi: ProgramApi,
+    private val userApi: UserApi,
     private val context: Application
 ) {
     fun getAllPrograms(): Flow<Resource<List<Program>>> {
@@ -25,7 +25,7 @@ class ProgramRepository @Inject constructor(
                 programDao.getAllPrograms()
             },
             fetch = {
-                programApi.getPrograms()
+                userApi.getPrograms()
             },
             saveFetchResult = { response ->
                 response.body()?.let {

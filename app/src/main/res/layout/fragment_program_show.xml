@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     tools:context="myfitnesspass.ui.home.programs.fragments.ShowProgramsFragment">
 
+
     <LinearLayout
         android:id="@+id/linear_id"
         android:layout_width="match_parent"
@@ -58,6 +59,7 @@
         </LinearLayout>
 
 
+
     </LinearLayout>
 
     <View
@@ -89,13 +91,22 @@
 <!--        android:layout_marginEnd="16dp"-->
 <!--        android:layout_marginBottom="16dp" />-->
 
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_bar"
+        android:layout_margin="16dp"
+        >
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/search_bar"
-        android:layout_margin="16dp"
        />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

@@ -1,19 +1,16 @@
 package myfitnesspass.ui.auth.login.fragments
 
-import android.content.ContentValues.TAG
 import android.content.SharedPreferences
 import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
-import my.myfitness.myfitnesspass.data.remote.others.BasicAuthInterceptor
+import myfitnesspass.data.remote.others.BasicAuthInterceptor
 import myfitnesspass.fitness.myfitness.R
 import myfitnesspass.fitness.myfitness.databinding.AuthLoginBinding
 import myfitnesspass.other.Constants.KEY_LOGGED_IN_EMAIL
@@ -23,7 +20,6 @@ import myfitnesspass.other.Constants.NO_KEY_LOGGED_IN_PASSWORD
 import myfitnesspass.other.Status
 import myfitnesspass.ui.BaseFragment
 import myfitnesspass.ui.auth.login.viewmodel.LoginViewModel
-import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint

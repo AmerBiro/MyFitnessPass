@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKey
 import myfitnesspass.data.local.database.ProgramDatabase
-import my.myfitness.myfitnesspass.data.remote.others.BasicAuthInterceptor
+import myfitnesspass.data.remote.others.BasicAuthInterceptor
 import myfitnesspass.data.remote.api.UserApi
 import myfitnesspass.other.Constants.BASE_URL
 import myfitnesspass.other.Constants.DATABASE_NAME
@@ -16,6 +16,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import myfitnesspass.data.remote.api.ProgramApi
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -56,6 +57,8 @@ object AppModule {
             .build()
             .create(UserApi::class.java)
     }
+
+
 
     @Singleton
     @Provides
