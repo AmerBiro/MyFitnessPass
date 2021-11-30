@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context="myfitnesspass.ui.home.programs.fragments.ProgramView">
+    tools:context="myfitnesspass.ui.home.programs.fragments.ProgramDetails">
 
 
 

@@ -2,5 +2,5 @@ package myfitnesspass.ui.home.programs.viewmodel
 
 import androidx.lifecycle.ViewModel
 
-class ProgramCreationIIViewModel: ViewModel() {
+class ProgramDetailsViewModel: ViewModel() {
 }

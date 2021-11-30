@@ -18,7 +18,7 @@ import myfitnesspass.fitness.myfitness.databinding.FragmentProgramViewBinding
 import myfitnesspass.ui.BaseFragment
 import java.util.jar.Manifest
 
-class ProgramView : BaseFragment(R.layout.fragment_program_view), DayAdapter.OnItemClickListener {
+class ProgramDetails : BaseFragment(R.layout.fragment_program_view), DayAdapter.OnItemClickListener {
 
     private var _binding: FragmentProgramViewBinding? = null
     private val binding get() = _binding!!

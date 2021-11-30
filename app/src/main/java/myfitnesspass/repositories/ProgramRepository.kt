@@ -19,6 +19,25 @@ class ProgramRepository @Inject constructor(
     private val userApi: UserApi,
     private val context: Application
 ) {
+    suspend fun insertProgram(program: Program){
+        val response = try {
+            userApi.createProgram(program)
+        }catch(e: Exception){
+            null
+        }
+        if (response != null && response.isSuccessful){
+            programDao.createProgram(program.apply { isSynced = true })
+        }else{
+            programDao.createProgram(program)
+        }
+    }
+
+    suspend fun insertPrograms(programs: List<Program>){
+        programs.forEach { insertProgram(it) }
+    }
+
+    suspend fun getProgramById(programId: String) = programDao.getProgramById(programId)
+
     fun getAllPrograms(): Flow<Resource<List<Program>>> {
         return networkBoundResource(
             query = {
@@ -29,7 +48,7 @@ class ProgramRepository @Inject constructor(
             },
             saveFetchResult = { response ->
                 response.body()?.let {
-                    // TODO: Insert programs in database
+                    insertPrograms(it)
                 }
             },
             shouldFetch = {

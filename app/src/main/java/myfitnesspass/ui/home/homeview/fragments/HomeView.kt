@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import myfitnesspass.fitness.myfitness.R
-import myfitnesspass.fitness.myfitness.databinding.HomeBinding
 import myfitnesspass.ui.BaseFragment
 import myfitnesspass.ui.home.coach_fitness.viewpager.fragments.ViewFitnessCoach
 import myfitnesspass.ui.home.graph.fragments.GraphFragment

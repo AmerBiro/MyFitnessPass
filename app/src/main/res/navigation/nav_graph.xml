@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/homeView">
-
+    ProgramsFragment
     <fragment
         android:id="@+id/loginFragment"
         android:name="myfitnesspass.ui.auth.login.fragments.LoginFragment"
@@ -72,6 +72,12 @@
         <action
             android:id="@+id/action_programCreationII_to_programCreationIII"
             app:destination="@id/programCreationIII" />
+        <argument
+            android:name="programName"
+            app:argType="string" />
+        <argument
+            android:name="programDiscription"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/programCreationIII"
@@ -81,6 +87,15 @@
         <action
             android:id="@+id/action_programCreationIII_to_programCreationIIII"
             app:destination="@id/programCreationIIII" />
+        <argument
+            android:name="programName"
+            app:argType="string" />
+        <argument
+            android:name="programDes"
+            app:argType="string" />
+        <argument
+            android:name="startDate"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -93,7 +108,7 @@
     </fragment>
     <fragment
         android:id="@+id/programView"
-        android:name="myfitnesspass.ui.home.programs.fragments.ProgramView"
+        android:name="myfitnesspass.ui.home.programs.fragments.ProgramDetails"
         android:label="fragment_program_view"
         tools:layout="@layout/fragment_program_view" >
         <action
@@ -114,6 +129,16 @@
         <action
             android:id="@+id/action_programCreationIIII_to_programCreationIIIII"
             app:destination="@id/programCreationIIIII" />
+        <argument
+            android:name="programName"
+            app:argType="string" />
+        <argument
+            android:name="programDes"
+            app:argType="string" />
+        <argument
+            android:name="startDate"
+            app:argType="string" />
+        <argument android:name="endDate" />
     </fragment>
     <fragment
         android:id="@+id/programCreationIIIII"
@@ -123,7 +148,22 @@
         <action
             android:id="@+id/action_programCreationIIIII_to_homeView"
             app:destination="@id/homeView"
-            app:popUpTo="@id/homeView" /><!--fix back stack-->
+            app:popUpTo="@id/homeView" />
+        <argument
+            android:name="programName"
+            app:argType="string" />
+        <argument
+            android:name="programDes"
+            app:argType="string" />
+        <argument
+            android:name="startDate"
+            app:argType="string" />
+        <argument
+            android:name="endDate"
+            app:argType="string" />
+        <argument
+            android:name="item"
+            app:argType="string" /><!--fix back stack-->
     </fragment>
     <fragment
         android:id="@+id/dayCreationI"

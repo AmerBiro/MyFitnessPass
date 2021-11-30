@@ -83,6 +83,7 @@
         app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/programName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
@@ -113,6 +114,7 @@
 
         app:endIconMode="clear_text">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/programDescription"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textMultiLine"

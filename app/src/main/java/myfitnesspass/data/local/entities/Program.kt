@@ -15,7 +15,7 @@ data class Program(
     val startDate: Long,
     val endDate: Long,
     @Expose(deserialize = false, serialize = false)
-    val isSynced: Boolean = false,
+    var isSynced: Boolean = false,
 
     val fitness: String,
     val lastUpdateDate: Long,
