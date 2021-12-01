@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_program_show.*
 import myfitnesspass.adapters.recycler_view.ProgramAdapter
 import myfitnesspass.adapters.recycler_view.ProgramsAD
 import myfitnesspass.fitness.myfitness.R
@@ -69,24 +70,51 @@ class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show) {
         }
     }
 
+//    private fun subscribeToObservers() {
+//        viewModel.allPrograms.observe(viewLifecycleOwner, Observer {
+//            it?.let{event ->
+//                val result = event.peekContent()
+//                when (result.status){
+//
+//                    Status.SUCCESS -> {
+//                        programAdapter.programs = result.data!!
+//                        binding.swipeRefreshLayout.isRefreshing = false
+//                    }
+//
+//                    Status.LOADING -> {
+//                        result.data?.let { programs ->
+//                            programAdapter.programs = programs
+//                        }
+//                        binding.swipeRefreshLayout.isRefreshing = true
+//                    }
+//
+//                    Status.ERROR -> {
+//                        event.getContentIfNotHandled()?.let { errorResource ->
+//                            errorResource.message?.let { message ->
+//                                showSnackBar(view2, message)
+//                            }
+//                        }
+//                        result.data?.let { programs ->
+//                            programAdapter.programs = programs
+//                        }
+//                        binding.swipeRefreshLayout.isRefreshing = false
+//                    }
+//
+//                }
+//            }
+//        })
+//    }
+
+
     private fun subscribeToObservers() {
         viewModel.allPrograms.observe(viewLifecycleOwner, Observer {
-            it?.let{event ->
+            it?.let { event ->
                 val result = event.peekContent()
-                when (result.status){
-
+                when(result.status) {
                     Status.SUCCESS -> {
                         programAdapter.programs = result.data!!
-                        binding.swipeRefreshLayout.isRefreshing = false
+                        swipeRefreshLayout.isRefreshing = false
                     }
-
-                    Status.LOADING -> {
-                        result.data?.let { programs ->
-                            programAdapter.programs = programs
-                        }
-                        binding.swipeRefreshLayout.isRefreshing = true
-                    }
-
                     Status.ERROR -> {
                         event.getContentIfNotHandled()?.let { errorResource ->
                             errorResource.message?.let { message ->
@@ -96,14 +124,17 @@ class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show) {
                         result.data?.let { programs ->
                             programAdapter.programs = programs
                         }
-                        binding.swipeRefreshLayout.isRefreshing = false
+                        swipeRefreshLayout.isRefreshing = false
                     }
-
+                    Status.LOADING -> {
+                        result.data?.let { programs ->
+                            programAdapter.programs = programs
+                        }
+                        swipeRefreshLayout.isRefreshing = true
+                    }
                 }
             }
         })
     }
-
-
 
 }
