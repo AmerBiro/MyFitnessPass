@@ -85,6 +85,7 @@
         app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/coachName"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:padding="10dp"
@@ -113,6 +114,7 @@
         app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fitnessName"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:padding="10dp"
