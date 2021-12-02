@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import myfitnesspass.ui.auth.sign_up.viewmodel.SignUpViewModel
 import myfitnesspass.fitness.myfitness.R
@@ -61,6 +62,7 @@ class SignUpFragment : BaseFragment(R.layout.auth_sign_up) {
                         Log.d(TAG, "subscribeToObservers: SUCCESS...")
                         binding.progressBar.visibility = View.GONE
                         showSnackBar(view2, result.data ?: "Successfully registered an account")
+                        findNavController().navigate(R.id.action_signUpFragment_to_homeView)
                     }
                     Status.ERROR -> {
                         Log.d(TAG, "subscribeToObservers: ERROR...")

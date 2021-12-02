@@ -73,6 +73,11 @@ class LoginFragment : BaseFragment(R.layout.auth_login) {
 
             viewModel.login(email, password)
         }
+
+        binding.buttonRegister.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
+        }
+
     }
 
     private fun authenticateApi(email: String, password: String) {

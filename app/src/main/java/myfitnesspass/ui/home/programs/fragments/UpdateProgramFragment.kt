@@ -38,17 +38,17 @@ class UpdateProgramFragment : BaseFragment(R.layout.fragment_update_program) {
 //            findNavController().navigate(R.id.action_updateProgramFragment_to_programCreationI)
 //        }
 
-        binding.buttonDateProgram.setOnClickListener {
-            findNavController().navigate(R.id.action_updateProgramFragment_to_programCreationII)
-        }
-
-        binding.buttonCoachProgram.setOnClickListener {
-            findNavController().navigate(R.id.action_updateProgramFragment_to_programCreationIIII)
-        }
-        
-        binding.buttonFitnessProgram.setOnClickListener {
-            findNavController().navigate(R.id.action_updateProgramFragment_to_programCreationIIIII)
-        }
+//        binding.buttonDateProgram.setOnClickListener {
+//            findNavController().navigate(R.id.action_updateProgramFragment_to_programCreationII)
+//        }
+//
+//        binding.buttonCoachProgram.setOnClickListener {
+//            findNavController().navigate(R.id.action_updateProgramFragment_to_programCreationIIII)
+//        }
+//
+//        binding.buttonFitnessProgram.setOnClickListener {
+//            findNavController().navigate(R.id.action_updateProgramFragment_to_programCreationIIIII)
+//        }
 
         showEditTextName()
         showEditTextDescription()
