@@ -16,6 +16,8 @@ class ProgramsAD : RecyclerView.Adapter<ProgramsAD.ProgramsViewHolder>() {
 
     private var onItemClickListener: ((Program) -> Unit)? = null
     private var onItemMenuClickListener: ((Program) -> Unit)? = null
+    private var onItemFavoriteClickListener: ((Program) -> Unit)? = null
+    private var onItemShareClickListener: ((Program) -> Unit)? = null
 
     inner class ProgramsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -83,6 +85,18 @@ class ProgramsAD : RecyclerView.Adapter<ProgramsAD.ProgramsViewHolder>() {
                 }
             }
 
+            favorite_button.setOnClickListener {
+                onItemFavoriteClickListener?.let { click ->
+                    click(program)
+                }
+            }
+
+            share_button.setOnClickListener {
+                onItemShareClickListener?.let { click ->
+                    click(program)
+                }
+            }
+
         }
     }
 
@@ -92,6 +106,14 @@ class ProgramsAD : RecyclerView.Adapter<ProgramsAD.ProgramsViewHolder>() {
 
     fun setOnItemMenuClickListener(onItemMenuClick: (Program) -> Unit) {
         this.onItemMenuClickListener = onItemMenuClick
+    }
+
+    fun setOnItemFavoriteClickListener(onItemFavoriteClick: (Program) -> Unit) {
+        this.onItemFavoriteClickListener = onItemFavoriteClick
+    }
+
+    fun setOnItemShareClickListener(onItemShareClick: (Program) -> Unit) {
+        this.onItemShareClickListener = onItemShareClick
     }
 
 }

@@ -54,6 +54,8 @@ class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show) {
         subscribeToObservers()
         onItemClickListener()
         onItemMenuClickListener()
+        onItemFavoriteClickListener()
+        onItemShareClickListener()
 
         binding.addProgram.setOnClickListener{
             findNavController().navigate(R.id.action_homeView_to_programCreationI)
@@ -76,6 +78,18 @@ class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show) {
 
     private fun onItemMenuClickListener(){
         programAdapter.setOnItemMenuClickListener{
+            Toast.makeText(activity, "${it.id}", 0).show()
+        }
+    }
+
+    private fun onItemFavoriteClickListener(){
+        programAdapter.setOnItemFavoriteClickListener{
+            Toast.makeText(activity, "${it.id}", 0).show()
+        }
+    }
+
+    private fun onItemShareClickListener(){
+        programAdapter.setOnItemShareClickListener{
             Toast.makeText(activity, "${it.id}", 0).show()
         }
     }
