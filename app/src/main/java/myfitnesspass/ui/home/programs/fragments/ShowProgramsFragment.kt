@@ -2,9 +2,11 @@ package myfitnesspass.ui.home.programs.fragments
 
 import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_USER
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -20,6 +22,7 @@ import myfitnesspass.other.Status
 import myfitnesspass.ui.BaseFragment
 import myfitnesspass.ui.home.homeview.fragments.HomeViewDirections
 import myfitnesspass.ui.home.programs.viewmodel.ShowProgramsViewModel
+import timber.log.Timber
 
 @AndroidEntryPoint
 class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show) {
@@ -50,6 +53,7 @@ class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show) {
         setupRecyclerView()
         subscribeToObservers()
         onItemClickListener()
+        onItemMenuClickListener()
 
         binding.addProgram.setOnClickListener{
             findNavController().navigate(R.id.action_homeView_to_programCreationI)
@@ -70,41 +74,11 @@ class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show) {
         }
     }
 
-//    private fun subscribeToObservers() {
-//        viewModel.allPrograms.observe(viewLifecycleOwner, Observer {
-//            it?.let{event ->
-//                val result = event.peekContent()
-//                when (result.status){
-//
-//                    Status.SUCCESS -> {
-//                        programAdapter.programs = result.data!!
-//                        binding.swipeRefreshLayout.isRefreshing = false
-//                    }
-//
-//                    Status.LOADING -> {
-//                        result.data?.let { programs ->
-//                            programAdapter.programs = programs
-//                        }
-//                        binding.swipeRefreshLayout.isRefreshing = true
-//                    }
-//
-//                    Status.ERROR -> {
-//                        event.getContentIfNotHandled()?.let { errorResource ->
-//                            errorResource.message?.let { message ->
-//                                showSnackBar(view2, message)
-//                            }
-//                        }
-//                        result.data?.let { programs ->
-//                            programAdapter.programs = programs
-//                        }
-//                        binding.swipeRefreshLayout.isRefreshing = false
-//                    }
-//
-//                }
-//            }
-//        })
-//    }
-
+    private fun onItemMenuClickListener(){
+        programAdapter.setOnItemMenuClickListener{
+            Toast.makeText(activity, "${it.id}", 0).show()
+        }
+    }
 
     private fun subscribeToObservers() {
         viewModel.allPrograms.observe(viewLifecycleOwner, Observer {

@@ -14,7 +14,8 @@ import java.util.*
 
 class ProgramsAD : RecyclerView.Adapter<ProgramsAD.ProgramsViewHolder>() {
 
-    private var onItemClickListener: ((Program) -> Unit)?= null
+    private var onItemClickListener: ((Program) -> Unit)? = null
+    private var onItemMenuClickListener: ((Program) -> Unit)? = null
 
     inner class ProgramsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -60,9 +61,9 @@ class ProgramsAD : RecyclerView.Adapter<ProgramsAD.ProgramsViewHolder>() {
 //            program_exercises.text = program.exercises
             program_date.text = "${program.startDate} - ${program.endDate}"
 
-            if (!program.isSynced){
+            if (!program.isSynced) {
                 isProgramSynced.setImageResource(R.drawable.ic_baseline_cloud_off_24)
-            }else{
+            } else {
                 isProgramSynced.setImageResource(R.drawable.ic_baseline_cloud_on_24)
             }
 
@@ -70,8 +71,14 @@ class ProgramsAD : RecyclerView.Adapter<ProgramsAD.ProgramsViewHolder>() {
             val dateString = dateFormat.format(program.creationDate)
             program_creation_date.text = dateString
 
-            setOnClickListener{
+            setOnClickListener {
                 onItemClickListener?.let { click ->
+                    click(program)
+                }
+            }
+
+            menu_buttons.setOnClickListener {
+                onItemMenuClickListener?.let { click ->
                     click(program)
                 }
             }
@@ -79,8 +86,12 @@ class ProgramsAD : RecyclerView.Adapter<ProgramsAD.ProgramsViewHolder>() {
         }
     }
 
-    fun setOnItemClickListener(onItemClick: (Program) -> Unit){
+    fun setOnItemClickListener(onItemClick: (Program) -> Unit) {
         this.onItemClickListener = onItemClick
+    }
+
+    fun setOnItemMenuClickListener(onItemMenuClick: (Program) -> Unit) {
+        this.onItemMenuClickListener = onItemMenuClick
     }
 
 }
