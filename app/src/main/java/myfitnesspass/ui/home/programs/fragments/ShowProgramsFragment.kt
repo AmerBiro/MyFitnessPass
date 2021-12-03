@@ -63,7 +63,7 @@ class ShowProgramsFragment: BaseFragment(R.layout.fragment_program_show) {
     }
 
     private fun setupRecyclerView() = binding.recyclerview.apply {
-        programAdapter = ProgramsAD()
+        programAdapter = ProgramsAD(requireContext())
         adapter = programAdapter
         layoutManager = LinearLayoutManager(requireContext())
     }

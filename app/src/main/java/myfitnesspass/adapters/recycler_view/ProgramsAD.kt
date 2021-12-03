@@ -1,18 +1,23 @@
 package myfitnesspass.adapters.recycler_view
 
+import android.content.Context
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.PopupMenu
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.program_list_view.view.*
 import myfitnesspass.data.local.entities.Program
 import myfitnesspass.fitness.myfitness.R
+import myfitnesspass.ui.home.homeview.fragments.HomeViewDirections
 import java.text.SimpleDateFormat
 import java.util.*
 
-class ProgramsAD : RecyclerView.Adapter<ProgramsAD.ProgramsViewHolder>() {
+class ProgramsAD (val c: Context): RecyclerView.Adapter<ProgramsAD.ProgramsViewHolder>() {
 
     private var onItemClickListener: ((Program) -> Unit)? = null
     private var onItemMenuClickListener: ((Program) -> Unit)? = null
@@ -81,7 +86,7 @@ class ProgramsAD : RecyclerView.Adapter<ProgramsAD.ProgramsViewHolder>() {
 
             menu_buttons.setOnClickListener {
                 onItemMenuClickListener?.let { click ->
-                    click(program)
+                    popupMenu(it)
                 }
             }
 
@@ -114,6 +119,36 @@ class ProgramsAD : RecyclerView.Adapter<ProgramsAD.ProgramsViewHolder>() {
 
     fun setOnItemShareClickListener(onItemShareClick: (Program) -> Unit) {
         this.onItemShareClickListener = onItemShareClick
+    }
+
+    private fun popupMenu(v:View){
+        val popupMenus = PopupMenu(c.applicationContext,v)
+        popupMenus.inflate(R.menu.program_item_more)
+        popupMenus.setOnMenuItemClickListener {
+            when(it.itemId){
+                R.id.edit -> {
+                    //todo
+                    val vi = HomeViewDirections.actionHomeViewToUpdateProgramFragment()
+                    Navigation.findNavController(v).navigate(vi)
+
+                    true
+                }
+
+                R.id.delete ->{
+                    true
+                }
+
+                else -> true
+
+            }
+        }
+        popupMenus.show()
+        popupMenus.gravity = Gravity.LEFT
+        val popup = PopupMenu::class.java.getDeclaredField("mPopup")
+        popup.isAccessible = true
+        val menu = popup.get(popupMenus)
+        menu.javaClass.getDeclaredMethod("setForceShowIcon", Boolean::class.java)
+            .invoke(menu,true)
     }
 
 }
