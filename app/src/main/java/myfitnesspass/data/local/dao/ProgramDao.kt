@@ -7,6 +7,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import myfitnesspass.data.local.entities.Program
 import kotlinx.coroutines.flow.Flow
+import myfitnesspass.data.local.entities.LocallyDeletedProgramID
 
 
 @Dao
@@ -35,5 +36,14 @@ interface ProgramDao {
 
     @Query("DELETE FROM program WHERE isSynced = 1")
     suspend fun deleteAllSyncedPrograms()
+
+    @Query("SELECT * FROM locally_deleted_program_ids")
+    suspend fun getAllLocallyDeletedProgramIDs():List<LocallyDeletedProgramID>
+
+    @Query("Delete from locally_deleted_program_ids WHERE deletedProgramID = :deletedProgramID")
+    suspend fun deleteLocallyDeletedProgramID(deletedProgramID: String)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertLocallyDeletedProgramID(locallyDeletedProgramID: LocallyDeletedProgramID)
 
 }
